@@ -10,6 +10,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'header-footer',
+    loadChildren: () => import('./header-footer/header-footer.module').then( m => m.HeaderFooterPageModule)
   }
 ];
 
