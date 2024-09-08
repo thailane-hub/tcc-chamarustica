@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'ProjetoAngularFirebase',
+  appName: 'tcc-chamarustica',
   webDir: 'www',
   server: {
     androidScheme: 'https'

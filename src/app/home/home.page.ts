@@ -8,6 +8,7 @@ import { MessageService } from '../services/message.service';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePage {
 
