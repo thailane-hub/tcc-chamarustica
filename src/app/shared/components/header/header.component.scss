@@ -1,0 +1,14 @@
+.toolbar{
+    z-index: 0;
+    ion-avatar {
+        border-radius: 0px;
+      }
+}
+
+#logo{
+    position: absolute;
+    border-radius: 100%;
+    left: 50px;
+    height: 145px;
+    z-index: 10;
+}
