@@ -12,8 +12,13 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+<<<<<<< HEAD
     path: 'cardapio',
     loadChildren: () => import('./cardapio/cardapio.module').then( m => m.CardapioPageModule)
+=======
+    path: 'sobrenos',
+    loadChildren: () => import('./sobrenos/sobrenos.module').then( m => m.SobrenosPageModule)
+>>>>>>> f0799f1 (sobrenos)
   },
 ];
 
