@@ -7,6 +7,8 @@ import { HomePage } from './home.page';
 import { HomePageRoutingModule } from './home-routing.module';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
+import { BannerModule } from '../shared/components/banner/banner.module';
+import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { FooterModule } from '../shared/components/footer/footer.module';
     IonicModule,
     HomePageRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    BannerModule,
+    BannerRusticoModule
   ],
   declarations: [HomePage]
 })

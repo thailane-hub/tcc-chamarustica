@@ -5,34 +5,19 @@
 .custom-card{
     width: 385px;
     height: 378px;
-    // flex: 1 1 30%; /* Ajusta a largura dos cards */
-    // margin: 10px; /* Adiciona espaçamento ao redor dos cards */
 }
 
 .card-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin: 80px;
+    padding: 50px;
 }
 
-.custom-color{
-    background-color: #EEEEEE;
-    background-image: url("../../assets/img/image 7.png");
-    background-repeat: no-repeat;
-    height: 400px;
-    width: 100px;
-    position: relative;
-    overflow: hidden; 
-}
 .card-img{
     height: 549px;
     width: 389px;
     position: absolute;
     left: 75%;
-}
-
-
-.increva-se-img{
-    height: 121px;
-    width: 432px;
 }
