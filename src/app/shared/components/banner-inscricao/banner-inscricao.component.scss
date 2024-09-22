@@ -11,7 +11,7 @@
 .trabalhe{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items:start;
     justify-content: center;
     color: black;
 }
@@ -28,9 +28,9 @@
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     display: flex;
-   justify-content: center;
-   align-items: center;
-   color: #10893E;
+    justify-content: flex-end; /* Alinha o conteúdo à direita */
+    align-items: center; /* Centraliza verticalmente */
+    color: #10893E;
 }
 
 .custom-col{

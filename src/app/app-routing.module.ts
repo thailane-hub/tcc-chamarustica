@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'evento',
     loadChildren: () => import('./evento/evento.module').then( m => m.EventoPageModule)
+  },
+  {
+    path: 'cardapio',
+    loadChildren: () => import('./cardapio/cardapio.module').then( m => m.CardapioPageModule)
   }
 ];
 

@@ -14,15 +14,15 @@ export class EventoPage implements OnInit {
 
    {
     image:'https://img.freepik.com/fotos-premium/uma-guitarra-senta-se-ao-lado-de-uma-parede-de-madeira_1001772-5993.jpg?w=360',
-    text:'Sábado/28'
+    date:'Sábado/28'
    },
    {
     image:'https://img.freepik.com/fotos-premium/uma-guitarra-senta-se-ao-lado-de-uma-parede-de-madeira_1001772-5993.jpg?w=360',
-    text:'Sábado/28'
+    date:'Sábado/28'
    },
    {
     image:'https://img.freepik.com/fotos-premium/uma-guitarra-senta-se-ao-lado-de-uma-parede-de-madeira_1001772-5993.jpg?w=360',
-    text:'Sábado/28'
+    date:'Sábado/28'
    }
 
 
