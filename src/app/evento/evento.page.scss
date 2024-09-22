@@ -1,0 +1,43 @@
+.banner{
+    margin: auto;
+    align-items: center;
+    width: 1200px;
+    height: 430px;
+    margin-top: 50px;
+    
+}
+
+.banner-img{
+    width: 100vw;;
+    height: 430px;
+    object-fit: cover;
+    filter: brightness(0.4);
+}
+
+.card-container{
+  margin: auto;
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card-img{
+    width: 250px;
+    height: 350px;
+
+}
+
+.label{
+    position: absolute;
+    top: 10%;
+    left:18%;
+    padding: 50px;
+}
+.card-label{
+    background-color: #10893E;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+

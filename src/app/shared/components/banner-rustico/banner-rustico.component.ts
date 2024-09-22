@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-rustico.component.scss'],
 })
 export class BannerRusticoComponent  implements OnInit {
-  trabalho = {
-    titulo:'Trabalhe',
-    subtitulo:'Conosco!'
+  texto = {
+    titulo:'Favoritos'
   }
 
   constructor() { }

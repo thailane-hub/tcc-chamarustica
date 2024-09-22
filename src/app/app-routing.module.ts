@@ -14,6 +14,14 @@ const routes: Routes = [
   {
     path: 'cadastro',
     loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'favorito',
+    loadChildren: () => import('./favorito/favorito.module').then( m => m.FavoritoPageModule)
+  },
+  {
+    path: 'evento',
+    loadChildren: () => import('./evento/evento.module').then( m => m.EventoPageModule)
   }
 ];
 
