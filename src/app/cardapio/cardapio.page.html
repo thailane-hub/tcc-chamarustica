@@ -1,5 +1,11 @@
 <app-header></app-header>
 <ion-content [fullscreen]="true">
+  <app-banner-rustico></app-banner-rustico>  
+  <div class="text">
+    <a href=""><h1 class="text-h1">Bebidas</h1></a>
+    <a href=""><h1 class="text-h1">Hambúrgueres</h1></a>
+    <a href=""><h1 class="text-h1">Porções</h1></a>
+  </div>
   <ion-row>
     <ng-container *ngFor="let cardapio of this.cardapios">
      <ion-col size="4" sizelg="3" class="card-container" >
