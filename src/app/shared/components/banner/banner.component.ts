@@ -13,9 +13,9 @@ export class BannerComponent  implements OnInit {
     desconto:'Desconto de 20%'
   }
 
-  bunner = {
-    imagem:'https://aceno.com/wp-content/uploads/2018/04/dalas_burger_title_02.jpg',
-  }
+  // banner = {
+  //   imagem:'https://aceno.com/wp-content/uploads/2018/04/dalas_burger_title_02.jpg',
+  // }
 
   constructor() { }
 

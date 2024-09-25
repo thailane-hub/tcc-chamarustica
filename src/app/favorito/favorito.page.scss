@@ -1,10 +1,10 @@
+
 .card-container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 500px;
-    height: 500px;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .card-img{

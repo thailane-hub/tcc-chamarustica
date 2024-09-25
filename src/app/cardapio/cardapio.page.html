@@ -1,12 +1,12 @@
-<app-header></app-header>
 <ion-content [fullscreen]="true">
+  <app-header></app-header>
   <app-banner-rustico></app-banner-rustico>  
   <div class="text">
     <a href=""><h1 class="text-h1">Bebidas</h1></a>
     <a href=""><h1 class="text-h1">Hambúrgueres</h1></a>
     <a href=""><h1 class="text-h1">Porções</h1></a>
   </div>
-  <ion-row>
+  <ion-row class="container">
     <ng-container *ngFor="let cardapio of this.cardapios">
      <ion-col size="4" sizelg="3" class="card-container" >
        <ion-card>
@@ -19,10 +19,11 @@
             
             <ion-card-content>
               {{cardapio.descricao}}
-            </ion-card-content>
+            </ion-card-content>              
+        <app-bnt-adicionar></app-bnt-adicionar>
           </ion-card>
-     </ion-col>
+        </ion-col>
     </ng-container>
   </ion-row>
+  <app-footer></app-footer>
 </ion-content>
-<app-footer></app-footer>
