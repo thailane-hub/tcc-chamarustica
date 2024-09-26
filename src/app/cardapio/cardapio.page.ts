@@ -21,7 +21,6 @@ export class CardapioPage implements OnInit {
       preco:'R$: 00,00 ',
       descricao:'Pão Brioche, 80g Angus, Queijo Cheddar e Maionese da Casa.'
     }, 
-
     {
       imagem:'https://i.pinimg.com/564x/16/f4/d1/16f4d1d65643db2638c515fc260749d2.jpg',
       icon:'https://img.icons8.com/?size=48&id=19295&format=png',
@@ -29,7 +28,6 @@ export class CardapioPage implements OnInit {
       preco:'R$: 00,00 ',
       descricao:'Pão Briche, 80g Angus, Queijo Cheddar, Bacon, Maionede da Casa.'
     }, 
-
     {
       imagem:'https://i.pinimg.com/564x/82/63/a4/8263a4d62dd0779529681dae171036e6.jpg',
       icon:'https://img.icons8.com/?size=48&id=19295&format=png',
@@ -37,7 +35,6 @@ export class CardapioPage implements OnInit {
       preco:'R$: 00,00 ',
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, Queijo Cheddar, Alface Americana, Tomate, Cebola Roxa e Maionese da Casa.'
     },
-
      {
       imagem:'https://i.pinimg.com/564x/b7/50/d1/b750d14c2314a3283290b236253147ac.jpg',
       icon:'https://img.icons8.com/?size=48&id=19295&format=png',
@@ -45,7 +42,6 @@ export class CardapioPage implements OnInit {
       preco:'R$: 00,00 ',
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, Queijo Cheddar e Maionese da Casa.'
     },
-
     {
       imagem:'https://i.pinimg.com/736x/b6/45/ff/b645ffe9613407bb123ae82131a2db98.jpg',
       icon:'https://img.icons8.com/?size=48&id=19295&format=png',
@@ -54,8 +50,4 @@ export class CardapioPage implements OnInit {
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, queijoCheddar, Bacon e Maionese da Casa.'
     }
   ];
-
-
-
-
 }
