@@ -1,0 +1,23 @@
+// .custom-img{
+//     width: 385px;
+//     height: 378px;
+// }
+.custom-card{
+    width: 385px;
+    height: 378px;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 80px;
+    padding: 50px;
+}
+
+.card-img{
+    height: 549px;
+    width: 389px;
+    position: absolute;
+    left: 75%;
+}

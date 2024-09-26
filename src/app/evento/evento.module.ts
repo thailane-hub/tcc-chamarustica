@@ -4,24 +4,25 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SobrenosPageRoutingModule } from './sobrenos-routing.module';
+import { EventoPageRoutingModule } from './evento-routing.module';
 
-import { SobrenosPage } from './sobrenos.page';
+import { EventoPage } from './evento.page';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
-
 import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
+import { BannerModule } from '../shared/components/banner/banner.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SobrenosPageRoutingModule,
+    EventoPageRoutingModule,
     HeaderModule,
     FooterModule,
-    BannerRusticoModule
+    BannerRusticoModule,
+    BannerModule
   ],
-  declarations: [SobrenosPage]
+  declarations: [EventoPage]
 })
-export class SobrenosPageModule {}
+export class EventoPageModule {}

@@ -1,0 +1,30 @@
+// .custom-img{
+//     height: 450px;
+//     width: 100%;
+//   }
+
+//   .backgound-img{
+//     background: url('{{this.banner.imagem}}') no-repeat center center / cover;
+//     width: 100%;
+//     height: 300px;
+//   }
+
+.backgound-img{
+    background: url('../../../../assets/img/banner.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  100% 100%;
+    width: 100%;
+    height: 450px;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start; 
+    margin-left: 10%;
+    font-size: 30px;
+  }
+

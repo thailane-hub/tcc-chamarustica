@@ -12,13 +12,25 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'cadastro',
+    loadChildren: () => import('./cadastro/cadastro.module').then( m => m.CadastroPageModule)
+  },
+  {
+    path: 'favorito',
+    loadChildren: () => import('./favorito/favorito.module').then( m => m.FavoritoPageModule)
+  },
+  {
+    path: 'evento',
+    loadChildren: () => import('./evento/evento.module').then( m => m.EventoPageModule)
+  },
+  {
     path: 'cardapio',
     loadChildren: () => import('./cardapio/cardapio.module').then( m => m.CardapioPageModule)
   },
   {
     path: 'sobrenos',
     loadChildren: () => import('./sobrenos/sobrenos.module').then( m => m.SobrenosPageModule)
-  },
+  }
 ];
 
 @NgModule({

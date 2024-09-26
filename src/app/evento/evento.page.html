@@ -1,0 +1,40 @@
+<app-header></app-header>
+<ion-content [fullscreen]="true">
+<app-banner-rustico></app-banner-rustico>
+<ion-row class="banner">
+  <ion-col>
+    <img src="{{banner.imagem}}" alt="" class="banner-img">
+  </ion-col>
+</ion-row>
+  <ion-row>
+      <ng-container *ngFor="let card of this.cards">
+        <ion-col class="card-container">
+          <div class="label">
+            <label class="card-label">{{card.date}}</label>
+          </div>
+          <div class="card-div">
+            <img src="{{card.image}}" alt="" class="card-img">
+          </div>
+      </ion-col>
+      </ng-container>
+  </ion-row>
+  <ion-row class="banner-conainer">
+    <ion-col>
+      <section class="banner-img-phone">
+        <img src="assets/img/fone.png" alt="" class="phone-img">
+      </section>
+      <section>
+        <div class="titulo" slot="end">
+          <h1>Faça seu </h1>
+          <h1 class="subtitulo">Show!</h1>
+        </div>
+      </section>
+      <section class="text">
+        <p>
+          Você tem interesse em se apresentar em nosso local? Deixe seu contato!
+        </p>
+      </section>
+    </ion-col>
+  </ion-row>
+</ion-content>
+<app-footer></app-footer>

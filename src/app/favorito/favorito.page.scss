@@ -1,0 +1,21 @@
+
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card-img{
+    width: 527px;
+    height: 329px;
+}
+.icon-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    width: 48px;
+    height: 48px;
+}

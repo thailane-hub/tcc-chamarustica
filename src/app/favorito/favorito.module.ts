@@ -4,26 +4,26 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CardapioPageRoutingModule } from './cardapio-routing.module';
+import { FavoritoPageRoutingModule } from './favorito-routing.module';
 
-import { CardapioPage } from './cardapio.page';
-import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
-import { HeaderModule } from '../shared/components/header/header.module';
+import { FavoritoPage } from './favorito.page';
 import { FooterModule } from '../shared/components/footer/footer.module';
+import { HeaderModule } from '../shared/components/header/header.module';
+import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
 import { BntAdicionarModule } from '../shared/components/button/bnt-adicionar/bnt-adicionar/bnt-adicionar.module';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CardapioPageRoutingModule,
-    BannerRusticoModule,
-    HeaderModule,
+    FavoritoPageRoutingModule,
     FooterModule,
+    HeaderModule,
+    BannerRusticoModule,
     BntAdicionarModule
+
   ],
-  declarations: [CardapioPage]
+  declarations: [FavoritoPage]
 })
-export class CardapioPageModule {}
+export class FavoritoPageModule {}
