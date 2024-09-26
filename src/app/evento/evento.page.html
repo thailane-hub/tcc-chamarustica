@@ -1,5 +1,5 @@
-<app-header></app-header>
 <ion-content [fullscreen]="true">
+  <app-header></app-header>
 <app-banner-rustico></app-banner-rustico>
 <ion-row class="banner">
   <ion-col>
@@ -18,23 +18,38 @@
       </ion-col>
       </ng-container>
   </ion-row>
-  <ion-row class="banner-conainer">
+
+  <ion-row class="banner-container">
     <ion-col>
-      <section class="banner-img-phone">
-        <img src="assets/img/fone.png" alt="" class="phone-img">
-      </section>
-      <section>
-        <div class="titulo" slot="end">
-          <h1>Faça seu </h1>
-          <h1 class="subtitulo">Show!</h1>
-        </div>
-      </section>
-      <section class="text">
-        <p>
-          Você tem interesse em se apresentar em nosso local? Deixe seu contato!
-        </p>
-      </section>
+      <ion-row class="banner-img-phone">
+        <ion-col>
+          <img src="assets/img/fone.png" alt="" class="phone-img">
+        </ion-col>
+      </ion-row>
+
+        <ion-row >
+          <ion-col class="titulo" >
+            <ion-label class="ion-align-self-end">
+              Faça seu
+            </ion-label>
+
+            <ion-item   class="ion-align-self-end">
+              <ion-label class="subtitulo">
+                Show!
+              </ion-label>
+            </ion-item>
+          </ion-col>
+        </ion-row>     
+      <ion-row class="text">
+        <ion-col>
+          <ion-text>
+              <p>
+                Você tem interesse em se apresentar em nosso local? Deixe seu contato!
+              </p>
+          </ion-text>
+        </ion-col>
+      </ion-row>
     </ion-col>
   </ion-row>
+  <app-footer></app-footer>
 </ion-content>
-<app-footer></app-footer>

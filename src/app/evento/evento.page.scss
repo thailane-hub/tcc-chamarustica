@@ -39,8 +39,8 @@
     border-radius: 30px;
     padding: 10px;
 }
-.banner-conainer{
-    background: url("/img/fundorusticoh.png");
+.banner-container{
+    background: url("/assets/img/fundorusticoh.png");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
@@ -58,17 +58,15 @@
 .titulo{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinha o conteúdo à direita */
 }
 .subtitulo{
     background-color: #F9BB45;
-    width: 350px;
-    height: 111px;
     color: #10893E;
 }
 .text{
-    align-items: center;
-    display: flex;
+     display: flex;
+     justify-content: center;
+     text-align: center;
     flex-direction: row;
     justify-content: center;
     color: black;
