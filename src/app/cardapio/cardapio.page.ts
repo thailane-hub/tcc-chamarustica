@@ -53,11 +53,9 @@ export class CardapioPage implements OnInit {
       preco:'R$: 00,00 ',
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, queijoCheddar, Bacon e Maionese da Casa.'
     }
-  ]
+  ];
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+
 
 }

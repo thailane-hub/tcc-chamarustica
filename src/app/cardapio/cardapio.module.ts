@@ -12,6 +12,7 @@ import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { BntAdicionarModule } from '../shared/components/button/bnt-adicionar/bnt-adicionar/bnt-adicionar.module';
 
+
 @NgModule({
   imports: [
     CommonModule,

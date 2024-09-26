@@ -9,6 +9,7 @@ import { SobrenosPageRoutingModule } from './sobrenos-routing.module';
 import { SobrenosPage } from './sobrenos.page';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
+
 import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
 
 @NgModule({
