@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cardapio.page.html',
   styleUrls: ['./cardapio.page.scss'],
 })
-export class CardapioPage implements OnInit {
+export class CardapioPage {
   cardapios =[
     {
       imagem:'https://i.pinimg.com/564x/c4/21/0e/c4210e53b286c1cb426be29516be59a6.jpg',
