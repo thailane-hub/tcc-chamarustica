@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { BntAdicionarComponent } from './bnt-adicionar.component';
+import { BtnAdicionarComponent } from './btn-adicionar.component';
 
 
 
 @NgModule({
-  declarations: [BntAdicionarComponent],
+  declarations: [BtnAdicionarComponent],
   imports: [
     CommonModule,
     IonicModule
   ],
   exports:[
-    BntAdicionarComponent
+    BtnAdicionarComponent
   ]
 })
-export class BntAdicionarModule { }
+export class BtnAdicionarModule { }

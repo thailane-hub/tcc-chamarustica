@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-banner-rustico',
@@ -6,9 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner-rustico.component.scss'],
 })
 export class BannerRusticoComponent  implements OnInit {
-  texto = {
-    titulo:'Favoritos'
-  }
+
+  @Input() texto: any = 'Texto Exemplo';
 
   constructor() { }
 

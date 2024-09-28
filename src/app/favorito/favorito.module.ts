@@ -10,7 +10,7 @@ import { FavoritoPage } from './favorito.page';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
-import { BntAdicionarModule } from '../shared/components/button/bnt-adicionar/bnt-adicionar/bnt-adicionar.module';
+import { BtnAdicionarModule } from '../shared/components/button/btn-adicionar/btn-adicionar.module';
 
 @NgModule({
   imports: [
@@ -21,7 +21,7 @@ import { BntAdicionarModule } from '../shared/components/button/bnt-adicionar/bn
     FooterModule,
     HeaderModule,
     BannerRusticoModule,
-    BntAdicionarModule
+    BtnAdicionarModule
 
   ],
   declarations: [FavoritoPage]

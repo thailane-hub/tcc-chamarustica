@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent  implements OnInit {
-
+  fundo ='https://img.freepik.com/psd-gratuitas/modelo-de-capa-de-facebook-delicioso-menu-de-hamburguer-e-comida_106176-2198.jpg';
   texto = {
     subtitulo:'Apenas hoje',
     titulo:'Hambúrguer Simples',

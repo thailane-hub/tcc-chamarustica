@@ -1,4 +1,4 @@
-<ion-row class="backgound-img container">
+<ion-row class="backgound-img container"  [ngStyle]="{'background-image': 'url(' + this.fundo + ')'}">
   <ion-col class="texto">
     <p>{{this.texto.subtitulo}}</p>
     <h1>{{this.texto.titulo}}</h1>
