@@ -11,7 +11,7 @@
      <ion-col size="4" sizelg="3" class="card-container" >
        <ion-card>
           <img src="{{cardapio.icon}}" alt="" srcset="" class="icon-img">
-            <img class="card-img" alt="" src="{{cardapio.imagem}}" />
+            <img class="card-img" alt="" src="{{cardapio.imagem}}"  />
             <ion-card-header>
               <ion-card-title>{{cardapio.nome}}</ion-card-title>
               <ion-card-subtitle>{{cardapio.preco}}</ion-card-subtitle>
@@ -20,7 +20,7 @@
             <ion-card-content>
               {{cardapio.descricao}}
             </ion-card-content>              
-            <app-btn-adicionar ></app-btn-adicionar>
+            <app-btn-adicionar texto="Adicionar" ></app-btn-adicionar>
           </ion-card>
         </ion-col>
     </ng-container>

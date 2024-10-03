@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-btn-adicionar',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./btn-adicionar.component.scss'],
 })
 export class BtnAdicionarComponent  implements OnInit {
+
+  @Input() texto: any = 'Texto Exemplo';
 
   constructor() { }
 

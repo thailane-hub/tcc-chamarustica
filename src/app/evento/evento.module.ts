@@ -11,6 +11,7 @@ import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
 import { BannerModule } from '../shared/components/banner/banner.module';
+import { BtnAdicionarModule } from '../shared/components/button/btn-adicionar/btn-adicionar.module';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { BannerModule } from '../shared/components/banner/banner.module';
     HeaderModule,
     FooterModule,
     BannerRusticoModule,
-    BannerModule
+    BannerModule,
+    BtnAdicionarModule
   ],
   declarations: [EventoPage]
 })
