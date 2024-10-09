@@ -2,6 +2,15 @@
   <app-header></app-header>
   <app-btn-adicionar class="btnadd" texto="Continuar comprando"></app-btn-adicionar>
 
+  <ng-container *ngFor="let item as this.itens">
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-img src="{{ item.img }}"></ion-img>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ng-container>
 
   <app-footer></app-footer>
 </ion-content>
