@@ -34,11 +34,13 @@
     left:18%;
     padding: 50px;
 }
+
 .card-label{
     background-color: #10893E;
     border-radius: 30px;
     padding: 10px;
 }
+
 .banner-container{
     background: url("/assets/img/fundorusticoh.png");
     background-repeat: no-repeat;
@@ -54,6 +56,7 @@
     height: 450px;
     width: 300px;
 }
+
 .texto{
     display: flex;
     flex-direction: row;
@@ -61,18 +64,21 @@
     align-items: center;
     font-size: 2rem;
 }
+
 .titulo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 4rem;
 }
+
 .subtitulo{
     background-color: #F9BB45;
     color: #10893E;
     border-top-left-radius:5rem ;
     border-bottom-left-radius: 5rem;
 }
+
 .text{
      display: flex;
      justify-content: center;
@@ -81,7 +87,6 @@
     justify-content: center;
     color: black;
 }
-
 
 .show{
     display: flex;
