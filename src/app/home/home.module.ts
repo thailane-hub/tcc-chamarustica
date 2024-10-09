@@ -10,6 +10,7 @@ import { FooterModule } from '../shared/components/footer/footer.module';
 import { BannerModule } from '../shared/components/banner/banner.module';
 import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-rustico.module';
 import { BannerInscricaoModule } from '../shared/components/banner-inscricao/banner-inscricao.module';
+import { BtnAdicionarModule } from '../shared/components/button/btn-adicionar/btn-adicionar.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BannerInscricaoModule } from '../shared/components/banner-inscricao/ban
     FooterModule,
     BannerModule,
     BannerRusticoModule,
-    BannerInscricaoModule
+    BannerInscricaoModule,
+    BtnAdicionarModule
   ],
   declarations: [HomePage]
 })

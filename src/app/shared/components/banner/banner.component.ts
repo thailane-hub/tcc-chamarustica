@@ -6,16 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent  implements OnInit {
-
+  fundo ='https://d1ih8jugeo2m5m.cloudfront.net/2024/01/como-fazer-hamburguer-para-vender-1200x685.jpg';
   texto = {
     subtitulo:'Apenas hoje',
     titulo:'Hambúrguer Simples',
     desconto:'Desconto de 20%'
   }
-
-  // banner = {
-  //   imagem:'https://aceno.com/wp-content/uploads/2018/04/dalas_burger_title_02.jpg',
-  // }
 
   constructor() { }
 

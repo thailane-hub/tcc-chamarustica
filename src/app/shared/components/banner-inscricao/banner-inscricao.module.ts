@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { BannerInscricaoComponent } from './banner-inscricao.component';
+import { BtnAdicionarModule } from '../button/btn-adicionar/btn-adicionar.module';
 
 
 
@@ -9,7 +10,8 @@ import { BannerInscricaoComponent } from './banner-inscricao.component';
   declarations: [BannerInscricaoComponent],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    BtnAdicionarModule
   ],
   exports:[
     BannerInscricaoComponent

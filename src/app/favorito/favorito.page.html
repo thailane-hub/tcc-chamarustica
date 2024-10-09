@@ -1,6 +1,6 @@
 <app-header></app-header>
 <ion-content [fullscreen]="true">
-<app-banner-rustico></app-banner-rustico>
+<app-banner-rustico texto="Favoritos"></app-banner-rustico>
  
 <ion-row>
   <ng-container *ngFor="let hamburguer of this.hamburgueres">
@@ -16,13 +16,13 @@
           <ion-card-content>
             {{hamburguer.descricao}}
           </ion-card-content>
-          <app-bnt-adicionar></app-bnt-adicionar>
+          <app-btn-adicionar texto="Adicionar"></app-btn-adicionar>
         </ion-card>
    </ion-col>
   </ng-container>
 </ion-row>
 
-<app-bnt-adicionar></app-bnt-adicionar>
+<app-btn-adicionar texto="Adicionar mais favoritos"></app-btn-adicionar>
 </ion-content>
 
 

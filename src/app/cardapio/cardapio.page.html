@@ -1,6 +1,6 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
-  <app-banner-rustico></app-banner-rustico>  
+  <app-banner-rustico texto="Cardápio"></app-banner-rustico>  
   <div class="text">
     <a href=""><h1 class="text-h1">Bebidas</h1></a>
     <a href=""><h1 class="text-h1">Hambúrgueres</h1></a>
@@ -11,7 +11,7 @@
      <ion-col size="4" sizelg="3" class="card-container" >
        <ion-card>
           <img src="{{cardapio.icon}}" alt="" srcset="" class="icon-img">
-            <img class="card-img" alt="" src="{{cardapio.imagem}}" />
+            <img class="card-img" alt="" src="{{cardapio.imagem}}"  />
             <ion-card-header>
               <ion-card-title>{{cardapio.nome}}</ion-card-title>
               <ion-card-subtitle>{{cardapio.preco}}</ion-card-subtitle>
@@ -20,7 +20,7 @@
             <ion-card-content>
               {{cardapio.descricao}}
             </ion-card-content>              
-        <app-bnt-adicionar></app-bnt-adicionar>
+            <app-btn-adicionar texto="Adicionar" ></app-btn-adicionar>
           </ion-card>
         </ion-col>
     </ng-container>
