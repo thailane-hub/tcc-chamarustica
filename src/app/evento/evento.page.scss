@@ -34,6 +34,7 @@
     left:18%;
     padding: 50px;
 }
+
 .card-label{
     font-family: "Bahianita", sans-serif;
     background-color:var(--verde);
@@ -42,6 +43,7 @@
     border-radius: 20px;
     padding: 10px;
 }
+
 .banner-container{
     background: url("/assets/img/fundorusticoh.png");
     background-repeat: no-repeat;
@@ -57,6 +59,7 @@
     height: 450px;
     width: 300px;
 }
+
 .texto{
     font-family: "Jaldi", sans-serif;
     display: flex;
@@ -67,16 +70,10 @@
     color:var(--preto);
 }
 
-.col-titulo{
+.titulo{
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.titulo{
-    font-family: "Bahianita", sans-serif;
-    font-size: 6rem;
-    color:var(--branco);
 }
 
 .subtitulo{
@@ -87,6 +84,7 @@
     border-top-left-radius:5rem ;
     border-bottom-left-radius: 5rem;
 }
+
 .text{
      display: flex;
      justify-content: center;
@@ -95,7 +93,6 @@
     justify-content: center;
     color: black;
 }
-
 
 .show{
     display: flex;

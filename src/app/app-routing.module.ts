@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'entrar',
     loadChildren: () => import('./entrar/entrar.module').then( m => m.EntrarPageModule)
+  },
+  {
+    path: 'checkout',
+    loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule)
   }
 ];
 
