@@ -1,27 +1,36 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
-  <app-btn-adicionar class="btnadd" texto="Continuar comprando"></app-btn-adicionar>
+  <div class="botao ion-padding">
+    <ion-button color="success" shape="round" class="adicionar" >
+      <ion-icon slot="end" name="cart-outline" color="light"></ion-icon>
+      <ion-text color="light">
+        Continuar comprando
+      </ion-text>
+    </ion-button>
+  </div>
 
-  <ion-list>
-    <ng-container *ngFor="let item of this.itens">
-      <div class="card-container">
+  <div class="check">
 
-        <img src="{{item.icon}}" alt="" srcset="" class="icon-img">
-        <img class="card-img" alt="" src="{{item.img}}"  />
-        <ion-card-header>
-          <ion-card-title>{{item.nome}}</ion-card-title>
-          <ion-card-subtitle>R${{item.preco}}</ion-card-subtitle>
-          <div class="qtds">
-            <img class="minimus" src="../../assets/img/menos.png" alt="">
-            <span>{{item.qtd}}</span>
-            <img src="../../assets/img/mais.png" alt="">
-          </div>
-        </ion-card-header>
-      </div>
+    <ion-list>
+      <ng-container *ngFor="let item of this.itens">
+        <div class="card-container">
+          <img src="{{item.icon}}" alt="" srcset="" class="icon-img">
+          <img class="card-img" alt="" src="{{item.img}}"  />
+          <ion-card-header>
+            <ion-card-title>{{item.nome}}</ion-card-title>
+            <ion-card-subtitle>R${{item.preco}}</ion-card-subtitle>
+            <div class="qtds">
+              <img class="minimus" src="../../assets/img/menos.png" alt="">
+              <span>{{item.qtd}}</span>
+              <img src="../../assets/img/mais.png" alt="">
+            </div>
+          </ion-card-header>
+        </div>
+      </ng-container>  
+    </ion-list>
 
-      
-    </ng-container>  
-</ion-list>
+
+  </div>
 
   <app-footer></app-footer>
 </ion-content>
