@@ -2,20 +2,26 @@
   <app-header></app-header>
   <app-btn-adicionar class="btnadd" texto="Continuar comprando"></app-btn-adicionar>
 
-  <ion-row class="container">
+  <ion-list>
     <ng-container *ngFor="let item of this.itens">
-     <ion-col size="4" sizelg="3" class="card-container" >
-       <ion-card>
+      <div class="card-container">
+
         <img src="{{item.icon}}" alt="" srcset="" class="icon-img">
         <img class="card-img" alt="" src="{{item.img}}"  />
-          <ion-card-header>
-            <ion-card-title>{{item.nome}}</ion-card-title>
-            <ion-card-subtitle>R${{item.preco}}</ion-card-subtitle>
-          </ion-card-header>
-        </ion-card>
-      </ion-col>
-    </ng-container>
-  </ion-row>
+        <ion-card-header>
+          <ion-card-title>{{item.nome}}</ion-card-title>
+          <ion-card-subtitle>R${{item.preco}}</ion-card-subtitle>
+          <div class="qtds">
+            <img class="minimus" src="../../assets/img/menos.png" alt="">
+            <span>{{item.qtd}}</span>
+            <img src="../../assets/img/mais.png" alt="">
+          </div>
+        </ion-card-header>
+      </div>
+
+      
+    </ng-container>  
+</ion-list>
 
   <app-footer></app-footer>
 </ion-content>
