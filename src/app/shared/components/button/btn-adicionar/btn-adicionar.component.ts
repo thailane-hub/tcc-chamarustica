@@ -8,6 +8,7 @@ import { Component,Input, OnInit } from '@angular/core';
 export class BtnAdicionarComponent  implements OnInit {
 
   @Input() texto: any = 'Texto Exemplo';
+  @Input() icone:any =  'cart-outline';
 
   constructor() { }
 

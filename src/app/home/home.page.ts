@@ -11,9 +11,9 @@ import { MessageService } from '../services/message.service';
 })
 export class HomePage {
   imagens = [
-    {foto:'https://scontent-gru2-1.xx.fbcdn.net/v/t39.30808-6/373060002_267644076036806_7215274788536383064_n.jpg?stp=dst-jpg_s206x206&_nc_cat=107&ccb=1-7&_nc_sid=714c7a&_nc_ohc=7HMEjJz9F64Q7kNvgFGJtlA&_nc_ht=scontent-gru2-1.xx&_nc_gid=A6AB6IWyM7y54v5GzrXd0ab&oh=00_AYCKVhCmEyZWOnzWtyJJAqDw9DFh1YAIkRBrfIRsCieMkA&oe=6703B1F5'},
-    {foto:'https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/372925930_267644079370139_2942615199873167573_n.jpg?stp=dst-jpg_s206x206&_nc_cat=103&ccb=1-7&_nc_sid=714c7a&_nc_ohc=cfiVB15-olMQ7kNvgHtE_WP&_nc_ht=scontent-gru1-2.xx&_nc_gid=A6AB6IWyM7y54v5GzrXd0ab&oh=00_AYAuQ1wwdi_A9ScA1-RkEXC05Dj6-u318yu7hwsgKu9tXg&oe=6703C7F2'},
-    {foto:'https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/372989133_267643606036853_8544932045501375450_n.jpg?stp=dst-jpg_s206x206&_nc_cat=103&ccb=1-7&_nc_sid=714c7a&_nc_ohc=Odw9vJoIKK4Q7kNvgHvVC9C&_nc_ht=scontent-gru1-2.xx&_nc_gid=A4WLRKa_Ei_4CQnFthhxnGh&oh=00_AYAtRtvNrhcm1hnXSoiKxollWtH1GK-LUK-mdb701icjMg&oe=6703BCA1'},
+    {foto:'https://scontent-gru1-1.xx.fbcdn.net/v/t39.30808-6/373495105_267643599370187_5691014280986322977_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zaL7S7KfnxEQ7kNvgHkgmgF&_nc_ht=scontent-gru1-1.xx&_nc_gid=Ad0zedM80_D-_id1ph9xjvS&oh=00_AYBqs-jSThJmZqeRLx7_Rm9sdff0dq-Zq-jpjR2sgiO1eQ&oe=670A44CC'},
+    {foto:'https://scontent-gru2-1.xx.fbcdn.net/v/t39.30808-6/372919809_267643596036854_3140197447740638164_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=lK0QFE_g96QQ7kNvgH1_FHL&_nc_ht=scontent-gru2-1.xx&_nc_gid=ABUQM7DDJ9AuYMuouV4h_yk&oh=00_AYBhSMkZzmcAjEhx-hcjimlAYnSer8buYjILIvTIWr62uQ&oe=670A592A'},
+    {foto:'https://scontent-gru1-2.xx.fbcdn.net/v/t39.30808-6/372989133_267643606036853_8544932045501375450_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=YSd3pLadqHUQ7kNvgE2x4ft&_nc_ht=scontent-gru1-2.xx&_nc_gid=AsZVdu-1sTmZh_nBmWL5705&oh=00_AYA6EjzkI7IeVfZ8QCg69sLBUwovYyt0PNJEzNCLEgg2xw&oe=670A5421'},
     
   ]
 

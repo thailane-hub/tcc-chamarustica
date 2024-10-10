@@ -5,8 +5,9 @@
 <ion-row>
   <ng-container *ngFor="let hamburguer of this.hamburgueres">
    <ion-col size="4" sizelg="3" class="card-container" >
-     <ion-card>
-        <img src="{{hamburguer.icon}}" alt="" srcset="" class="icon-img">
+     <ion-icon name="close" class="close"></ion-icon>
+     <ion-card  size="12" sizelg="20" >
+       <img src="{{hamburguer.star}}" alt="" srcset="" class="icon-img">
           <img class="card-img" alt="" src="{{hamburguer.imagem}}" />
           <ion-card-header>
             <ion-card-title>{{hamburguer.nome}}</ion-card-title>
@@ -22,7 +23,7 @@
   </ng-container>
 </ion-row>
 
-<app-btn-adicionar texto="Adicionar mais favoritos"></app-btn-adicionar>
+<app-btn-adicionar texto="+ Favoritos"  icone="star-outline"></app-btn-adicionar>
 </ion-content>
 
 
