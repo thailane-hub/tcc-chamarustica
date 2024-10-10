@@ -6,13 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./checkout.page.scss'],
 })
 export class CheckoutPage implements OnInit {
-  itens: any;
-
   itens: [
     {
-      img: '',
+      img: 'https://estiloap.com.br/wp-content/uploads/2016/05/Cheeseburger-Madero.jpg',
       nome: 'Smash burger',
-      subpreco: 45.59,
       preco: 91.18,
       qtd: 2
     }
