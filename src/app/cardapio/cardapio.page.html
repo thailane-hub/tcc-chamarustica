@@ -11,10 +11,16 @@
     </ion-col>
   </ion-row>
   <ion-row>
-    <ng-container *ngFor="let cardapio of this.cardapios">
+    <ng-container *ngFor="let cardapio of this.favoritoService.produtos">
      <ion-col size="12" sizelg="4" size-md="4" class="card-container">
       <ion-card>
-        <img src="{{cardapio.icon}}" alt="" srcset="" class="icon-img" >
+            <ng-container *ngIf="cardapio.favorito">
+           <img src="https://cdn1.iconfinder.com/data/icons/macster/70/.svg-17-512.png" class="icon-img" (click)="favoritar(cardapio)">
+         </ng-container>
+         <ng-container *ngIf="!cardapio.favorito">
+           <img src="https://img.icons8.com/?size=48&id=19295&format=png" class="icon-img"  (click)="favoritar(cardapio)">
+         </ng-container>
+        <!-- <img src="{{cardapio.icon}}" alt="" srcset="" class="icon-img" > -->
           <img class="card-img" alt="" src="{{cardapio.imagem}}" />
           <ion-card-header>
             <ion-card-title>{{cardapio.nome}}</ion-card-title>
