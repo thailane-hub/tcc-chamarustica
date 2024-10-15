@@ -18,6 +18,14 @@ export class FavoritoPage implements OnInit {
   ngOnInit() {
   }
 
-
+ remover(produto:any){
+  this.favoritoService.produtos.forEach(
+    item=>{
+      if(item.id==produto.id){
+        item.favorito = false;
+      }
+    }
+  )
+ }
 
 }

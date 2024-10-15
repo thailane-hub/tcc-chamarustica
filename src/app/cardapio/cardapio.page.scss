@@ -25,9 +25,13 @@
     justify-content: space-around;
     align-items: center;
     height:100px;
+   
 }
-.text-h1{
-    color: black;
+
+.text h1{
+    font-family: "Bahianita", sans-serif;
+    color: var(--branco);
+    font-size: 4rem;
 }
 
 a{
@@ -38,3 +42,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.carrinho{
+    z-index: 999;
+    position: fixed;
+    left:70%;
+    bottom: -5px;
+    width: 100%;
+}

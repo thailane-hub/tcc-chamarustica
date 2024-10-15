@@ -3,25 +3,19 @@
 <app-banner-rustico texto="Favoritos"></app-banner-rustico>
  
 <ion-row>
-  <ng-container *ngFor="let hamburguer of this.favoritoService.produtos">
-    <ng-container *ngIf="hamburguer.favorito">
+  <ng-container *ngFor="let produto of this.favoritoService.produtos">
+    <ng-container *ngIf="produto.favorito">
       <ion-col size="4" sizelg="3" class="card-container" >
         <ion-card  size="12" sizelg="20" > 
-           <img src="https://cdn1.iconfinder.com/data/icons/macster/70/.svg-17-512.png" class="icon-img">
-         <!-- <ng-container *ngIf="hamburguer.favorito">
-           <img src="https://cdn1.iconfinder.com/data/icons/macster/70/.svg-17-512.png" class="icon-img" (click)="favoritar(hamburguer)">
-         </ng-container>
-         <ng-container *ngIf="!hamburguer.favorito">
-           <img src="https://img.icons8.com/?size=48&id=19295&format=png" class="icon-img"  (click)="favoritar(hamburguer)">
-         </ng-container> -->
-             <img class="card-img" alt="" src="{{hamburguer.imagem}}" />
+           <img src="https://cdn1.iconfinder.com/data/icons/macster/70/.svg-17-512.png" class="icon-img" (click)="remover(produto)">
+             <img class="card-img" alt="" src="{{produto.imagem}}" />
              <ion-card-header>
-               <ion-card-title>{{hamburguer.nome}}</ion-card-title>
-               <ion-card-subtitle>{{hamburguer.preco}}</ion-card-subtitle>
+               <ion-card-title>{{produto.nome}}</ion-card-title>
+               <ion-card-subtitle>{{produto.preco}}</ion-card-subtitle>
              </ion-card-header>
              
              <ion-card-content>
-               {{hamburguer.descricao}}
+               {{produto.descricao}}
              </ion-card-content>
              <app-btn-adicionar texto="Adicionar"></app-btn-adicionar>
            </ion-card>
@@ -30,7 +24,7 @@
   </ng-container>
 </ion-row>
 
-<app-btn-adicionar texto="+ Favoritos"  icone="star-outline"></app-btn-adicionar>
+<app-btn-adicionar texto="+ Favoritos"  icone="star-outline" routerLink="/cardapio"></app-btn-adicionar>
 </ion-content>
 
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FavoritoService } from '../services/favorito.service';
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   selector: 'app-cardapio',
@@ -11,16 +12,17 @@ export class CardapioPage {
  
 
   constructor(
-    public favoritoService:FavoritoService
+    public favoritoService:FavoritoService,
+    public carrinhoService:CarrinhoService
   ) { }
 
   ngOnInit() {
   }
 
-  favoritar(cardapio: any){
-    console.log(cardapio)
+  favoritar(produto: any){
+    console.log(produto)
     this.favoritoService.produtos.forEach(item=>{
-      if(cardapio.id == item.id){
+      if(produto.id == item.id){
         item.favorito = !item.favorito
       }
     })
