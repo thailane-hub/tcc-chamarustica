@@ -46,6 +46,14 @@ export class FavoritoService {
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, Queijo Cheddar e Maionese da Casa.',
       favorito:false
     },
+    {
+      id:6,
+      imagem:'/assets/produto/image16.png',
+      nome:'Angus Bacon',
+      preco:'R$: 00,00 ',
+      descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, queijoCheddar, Bacon e Maionese da Casa.',
+      favorito:false
+    }
     
   ]
   

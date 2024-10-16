@@ -5,11 +5,17 @@ import { Injectable } from '@angular/core';
 })
 export class CarrinhoService {
 
-  carrinhos = [
+  private produto: any[] = [];
 
- 
+  constructor() {}
 
-  ]
+  adicionarcarrinho(produtos: any) {
+    this.produto.push(produtos);
+  }
 
-  constructor() { }
+  getcarrinhoItens() {
+    return this.produto;
+  }
+
+  
 }

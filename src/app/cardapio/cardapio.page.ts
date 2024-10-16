@@ -13,7 +13,7 @@ export class CardapioPage {
 
   constructor(
     public favoritoService:FavoritoService,
-    public carrinhoService:CarrinhoService
+    public carrinhoService:CarrinhoService,
   ) { }
 
   ngOnInit() {
@@ -29,6 +29,10 @@ export class CardapioPage {
 
     console.log(this.favoritoService.produtos);
 
+  }
+
+  adicionarcarrinho(produto: any) {
+    this.carrinhoService.adicionarcarrinho(produto);
   }
 
 }
