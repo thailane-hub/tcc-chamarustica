@@ -5,16 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class CarrinhoService {
 
-  private produto: any[] = [];
+  public produtos: any[] = [];
 
   constructor() {}
 
-  adicionarcarrinho(produtos: any) {
-    this.produto.push(produtos);
+  addProduto(produto: any) {
+    let produtoexiste = this.produtos.find(item => item.id === produto.id );
+
+    console.log(this.produtos)
+
+    if (!produtoexiste) 
+      this.produtos.push(produto);
+    
   }
 
   getcarrinhoItens() {
-    return this.produto;
+    return this.produtos;
   }
 
   

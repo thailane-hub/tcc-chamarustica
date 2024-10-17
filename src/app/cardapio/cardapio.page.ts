@@ -31,8 +31,24 @@ export class CardapioPage {
 
   }
 
-  adicionarcarrinho(produto: any) {
-    this.carrinhoService.adicionarcarrinho(produto);
+  addProduto(produto: any) {
+    this.carrinhoService.addProduto(produto);
+  }
+
+  add(produto:any){
+    this.carrinhoService.produtos.forEach(el => {
+      if(el.id == produto.id){
+        el.quantidade++
+        // subtotal=quantidade*preco
+      }
+    })
+  }
+  remove(produto:any){
+    this.carrinhoService.produtos.forEach(el => {
+      if(el.id == produto.id){
+        el.quantidade--
+      }
+    })
   }
 
 }
