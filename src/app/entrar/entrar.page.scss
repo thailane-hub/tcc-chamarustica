@@ -2,6 +2,7 @@
     background-image: url(../../assets/img/fundo-madeira.jpg);
     background-size: cover;
     background-position: center;
+    display: flex;
 }
 
 .img-entrar{
@@ -27,4 +28,50 @@
 
 .msg-boas span{
     font-size: 35px;    
+}
+
+.entrar-botoes{
+    margin-left: 250px;
+    margin-top: 100px;
+}
+
+.entr{
+    display: inline-block;
+    position: relative;
+    margin-left: 100px;
+}
+
+.entr span{
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.cad{
+    display: inline-block;
+    position: relative;
+    margin-left: 100px;
+}
+
+.cad span{
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.entrar-ou{
+    width: 155px;
+    height: 143px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 200px;
+}
+
+.btao{
+    width: 380px;
+    height: 75px;
 }
