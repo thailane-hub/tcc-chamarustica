@@ -91,7 +91,8 @@ export class CardapioPage {
   remove(produto:any){
     this.carrinhoService.produtos.forEach(el => {
       if(el.id == produto.id){
-        el.quantidade--
+        if(el.quantidade > 1)
+          el.quantidade--
       }
     })
   }
