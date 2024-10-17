@@ -3,7 +3,7 @@
 <app-banner-rustico texto="Favoritos"></app-banner-rustico>
  
 <ion-row>
-  <ng-container *ngFor="let produto of this.favoritoService.produtos">
+  <ng-container *ngFor="let produto of this.produtoService.produtos">
     <ng-container *ngIf="produto.favorito">
       <ion-col size="4" sizelg="3" class="card-container" >
         <ion-card  size="12" sizelg="20" > 

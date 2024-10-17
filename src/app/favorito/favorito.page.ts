@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FavoritoService } from '../services/favorito.service';
+import { ProdutoService } from '../services/produto.service';
 
 @Component({
   selector: 'app-favorito',
@@ -10,16 +10,16 @@ export class FavoritoPage implements OnInit {
 
 
   constructor(
-    public favoritoService:FavoritoService
+    public produtoService:ProdutoService
   ) {
-    console.log(this.favoritoService.produtos);
+    console.log(this.produtoService.produtos);
   }
 
   ngOnInit() {
   }
 
  remover(produto:any){
-  this.favoritoService.produtos.forEach(
+  this.produtoService.produtos.forEach(
     item=>{
       if(item.id==produto.id){
         item.favorito = false;
