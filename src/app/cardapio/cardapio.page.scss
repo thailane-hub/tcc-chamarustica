@@ -26,12 +26,17 @@
     justify-content: space-around;
     align-items: center;
     height:100px;
-    color: white;
+   
+}
+
+.text h1{
+    font-family: "Bahianita", sans-serif;
+    color: var(--branco);
+    font-size: 4rem;
 }
 
 a{
     text-decoration: none;
-    color: white;
 }
 
 a:hover { text-decoration: underline; }
