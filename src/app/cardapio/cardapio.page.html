@@ -7,8 +7,7 @@
     <a href=""><h1 class="text-h1">Porções</h1></a>
   </div>
   <ion-row class="container">
-    <ng-container *ngFor="let cardapio of this.cardapios">
-     <ion-col size="4" sizelg="3" class="card-container" >
+     <ion-col size="12" size-md="4" class="card-container" *ngFor="let cardapio of this.cardapios">
        <ion-card>
           <img src="{{cardapio.icon}}" alt="" srcset="" class="icon-img">
             <img class="card-img" alt="" src="{{cardapio.imagem}}"  />
@@ -23,7 +22,6 @@
             <app-btn-adicionar texto="Adicionar" ></app-btn-adicionar>
           </ion-card>
         </ion-col>
-    </ng-container>
   </ion-row>
   <app-footer></app-footer>
 </ion-content>
