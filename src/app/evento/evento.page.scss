@@ -35,8 +35,11 @@
     padding: 50px;
 }
 .card-label{
-    background-color: #10893E;
-    border-radius: 30px;
+    font-family: "Bahianita", sans-serif;
+    background-color:var(--verde);
+    font-size: 2rem;
+    color: var(--branco);
+    border-radius: 20px;
     padding: 10px;
 }
 .banner-container{
@@ -55,21 +58,32 @@
     width: 300px;
 }
 .texto{
+    font-family: "Jaldi", sans-serif;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color:var(--preto);
 }
-.titulo{
+
+.col-titulo{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 4rem;
 }
+
+.titulo{
+    font-family: "Bahianita", sans-serif;
+    font-size: 6rem;
+    color:var(--branco);
+}
+
 .subtitulo{
-    background-color: #F9BB45;
-    color: #10893E;
+    font-family: "Bahianita", sans-serif;
+    background-color: var(--amarelo);
+    color:var(--verde);
+    font-size: 6rem;  
     border-top-left-radius:5rem ;
     border-bottom-left-radius: 5rem;
 }

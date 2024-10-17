@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FavoritoService } from '../services/favorito.service';
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   selector: 'app-cardapio',
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cardapio.page.scss'],
 })
 export class CardapioPage {
+
   cardapios =[
     {
       imagem:'https://i.pinimg.com/564x/c4/21/0e/c4210e53b286c1cb426be29516be59a6.jpg',
@@ -51,3 +55,47 @@ export class CardapioPage {
     }
   ];
 }
+ 
+
+  constructor(
+    public favoritoService:FavoritoService,
+    public carrinhoService:CarrinhoService,
+  ) { }
+
+  ngOnInit() {
+  }
+
+  favoritar(produto: any){
+    console.log(produto)
+    this.favoritoService.produtos.forEach(item=>{
+      if(produto.id == item.id){
+        item.favorito = !item.favorito
+      }
+    })
+
+    console.log(this.favoritoService.produtos);
+
+  }
+
+  addProduto(produto: any) {
+    this.carrinhoService.addProduto(produto);
+  }
+
+  add(produto:any){
+    this.carrinhoService.produtos.forEach(el => {
+      if(el.id == produto.id){
+        el.quantidade++
+        // subtotal=quantidade*preco
+      }
+    })
+  }
+  remove(produto:any){
+    this.carrinhoService.produtos.forEach(el => {
+      if(el.id == produto.id){
+        el.quantidade--
+      }
+    })
+  }
+
+}
+

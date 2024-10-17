@@ -17,9 +17,23 @@
     flex-direction: row;
     justify-content: center;
     align-items: center; 
+
   }
 
 h1{
-    font-size: 100px;
-    font-weight: 600;
+    font-size: 12rem;
+    font-weight: 400;
+    font-family: "Bahianita", sans-serif;
+    color: var(--branco);
 }
+
+@media(max-width:768px)
+{
+    h1{
+        font-size: 45px;
+        font-weight: 400;
+        font-family: "Bahianita", sans-serif;
+        color: var(--branco);
+    }
+}
+

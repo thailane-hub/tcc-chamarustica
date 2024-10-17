@@ -20,14 +20,6 @@
     justify-content: center;
     font-size: 4rem;
 }
-.subtitulo{
-    background-color: #F9BB45;
-    color: #10893E;
-    border-top-right-radius:5rem ;
-    border-bottom-right-radius: 5rem;
-}
-
-
 .custom-col{
     position: relative;
     overflow: visible; /* Permite que a imagem saia do contêiner */
@@ -48,4 +40,24 @@
     right: 23%;
    
 }
+.titulo h1{
+    font-family: "Bahianita", sans-serif;
+    color:var(--branco);
+    font-size: 6rem;
+}
+
+.subtitulo h1{
+    font-family: "Bahianita", sans-serif;
+    border-top-right-radius:5rem ;
+    border-bottom-right-radius: 5rem;
+    background-color: var(--amarelo);
+    color:var(--verde);
+    font-size: 6rem;  
+}
+.text-descricao{
+    font-family: "Jaldi", sans-serif;
+    color:var(--preto);
+    font-size: 1.5rem; 
+}
+
 

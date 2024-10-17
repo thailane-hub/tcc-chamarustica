@@ -2,13 +2,13 @@
   <app-header></app-header>
   <app-banner-rustico texto="Eventos"></app-banner-rustico>
   <ion-row class="banner">
-    <ion-col>
+    <ion-col >
       <img src="{{banner.imagem}}" alt="" class="banner-img">
     </ion-col>
   </ion-row>
   <ion-row>
     <ng-container *ngFor="let card of this.cards">
-      <ion-col class="card-container">
+      <ion-col class="card-container" size="12" size-md="4">
         <div class="label">
           <label class="card-label">{{card.date}}</label>
         </div>
@@ -19,8 +19,8 @@
     </ng-container>
   </ion-row>
 
-  <ion-row class="banner-container">
-    <ion-col size="12" size-lg="3">  
+  <ion-row class="banner-container" >
+    <ion-col >  
       <img src="assets/img/fone.png" alt="" class="phone-img">
     </ion-col>
 
@@ -29,13 +29,13 @@
         <label >
             Você tem interesse em se apresentar em nosso local? Deixe seu contato!
         </label>
-        <app-btn-adicionar texto="Inscreva-se" ></app-btn-adicionar>
+        <app-btn-adicionar texto="Inscreva-se" icone="person"></app-btn-adicionar>
       </div>
     </ion-col>
 
-      <ion-col size="12" size-lg="4"  class="ion-text-center titulo">
+      <ion-col size="12" size-lg="4"  class="ion-text-center col-titulo">
         <div>
-          <ion-label>
+          <ion-label class="titulo">
             Faça seu
           </ion-label>
         </div>
