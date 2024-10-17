@@ -54,7 +54,6 @@ export class CardapioPage {
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, queijoCheddar, Bacon e Maionese da Casa.'
     }
   ];
-}
  
 
   constructor(
