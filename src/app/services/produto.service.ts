@@ -75,6 +75,7 @@ export class ProdutoService {
     
     this.produtos.forEach(el => {
       this.total += el.subtotal;
+      // this.total -= el.subtotal;
     })
 
     
