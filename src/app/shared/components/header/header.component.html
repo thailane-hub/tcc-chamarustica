@@ -1,7 +1,7 @@
 <ion-menu side="end" contentId="main-content">
   <ion-header>
     <ion-toolbar color="warning">
-      <ion-title>User 0001</ion-title>
+      <ion-title >User 0001</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding" color="dark">
@@ -10,14 +10,20 @@
         <ion-button routerLink="/favorito" color="light" fill="clear">Favoritos</ion-button>
       </ion-item>
       <ion-item color="dark">
-        <ion-button color="light" fill="clear">Horário de Atendimento</ion-button>
+        <ion-button color="light" fill="clear"  id="left-start">Horário de Atendimento</ion-button>
       </ion-item>
       <ion-item color="dark">
         <ion-button routerLink="/sobrenos" color="light" fill="clear">Contato</ion-button>
       </ion-item>
       <ion-item color="dark">
-        <ion-button color="light" fill="clear">Login</ion-button>
+        <ion-button routerLink="/entrar" color="light" fill="clear">Entrar</ion-button>
       </ion-item>
+
+      <ion-popover trigger="left-start" side="left" alignment="start" size="large">
+        <ng-template>
+          <ion-content class="ion-padding">Aberto todos os dias, das 18:00 até as 00:00</ion-content>
+        </ng-template>
+      </ion-popover>
 
     
     <ion-menu-toggle>
@@ -63,3 +69,7 @@
 
 </ion-row>
 </ion-header>
+
+
+
+
