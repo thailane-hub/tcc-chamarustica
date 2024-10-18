@@ -4,9 +4,9 @@
   <ion-row>
     <ion-col>
       <div class="text">
-        <a href=""><h1 class="text-h1">Bebidas</h1></a>
-        <a href=""><h1 class="text-h1">Hambúrgueres</h1></a>
-        <a href=""><h1 class="text-h1">Porções</h1></a>
+        <ion-label color="primary"><h1 class="text-h1">Bebidas</h1></ion-label>
+        <ion-label color="primary"><h1 class="text-h1">Hamburguer</h1></ion-label>
+        <ion-label color="primary"><h1 class="text-h1">Porções</h1></ion-label>
       </div>
     </ion-col>
   </ion-row>
@@ -22,12 +22,12 @@
          </ng-container>
           <img class="card-img" alt="" src="{{produto.imagem}}" />
           <ion-card-header>
-            <ion-card-title class="card-titulo">{{produto.nome}}</ion-card-title>
-            <ion-card-subtitle class="card-preco">{{produto.preco}}</ion-card-subtitle>
+            <ion-card-title color="primary" class="card-titulo">{{produto.nome}}</ion-card-title>
+            <ion-card-subtitle color="warning" class="card-preco">{{produto.preco}}</ion-card-subtitle>
           </ion-card-header>
           
           <ion-card-content class="card-descricao">
-            {{produto.descricao}}
+            <ion-label color="primary">{{produto.descricao}}</ion-label>
           </ion-card-content>
           <app-btn-adicionar texto="Adicionar"  (click)="addProduto(produto)"></app-btn-adicionar>
         </ion-card>
