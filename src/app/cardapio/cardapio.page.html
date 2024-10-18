@@ -56,19 +56,31 @@
                     
                     <ion-col class="carrinho-text" size="7">
                       <ion-card-subtitle class="carrinho-titulo">{{produto.nome}}</ion-card-subtitle>
-                      <ion-label class="carrinho-preco">{{produto.preco}}</ion-label>
+                      <ion-label class="carrinho-preco">R$: {{produto.preco}}</ion-label>
                     </ion-col>
 
                     <ion-col size="12" class="incrementer">
-                      <ion-icon name="trash-bin-outline"></ion-icon>
-                      <ion-icon name="remove-outline" (click)="remove(produto)"></ion-icon>
+                      <ng-container *ngIf="produto.quantidade==1">
+                        <ion-icon name="trash-bin-outline"(click)="deletar(produto)"></ion-icon>
+                      </ng-container>
+                      <ng-container *ngIf="produto.quantidade>1">
+                        <ion-icon name="remove-outline" (click)="remove(produto)"></ion-icon>
+                      </ng-container>
                       <ion-label>{{produto.quantidade}}</ion-label>
                       <ion-icon name="add-outline" (click)="add(produto)"></ion-icon>
+                    </ion-col>
+
+                    <ion-col>
+                      <ion-label>R$: {{ produto.subtotal }}</ion-label>
+                      
                     </ion-col>
                   </ion-row>
 
                 </ion-item>
               </ng-container>
+              <ion-item>
+                <ion-label>{{ this.produtoService.total }}</ion-label>
+              </ion-item>
         
             </ion-list>
           </ion-card-content>

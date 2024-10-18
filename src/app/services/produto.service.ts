@@ -4,14 +4,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProdutoService {
-
+  total:number=0;
   produtos =[
     {
       id:1,
       imagem:'/assets/produto/image11.png',
       nome:'Smash Rústico',
-      preco:'R$: 00,00 ',
+      preco:50.00,
       quantidade:1,
+      subtotal:0,
       descricao:'Pão Brioche, 2x 80g Angus, Queijo Cheddar, Aface Americana e Molho Especial.',
       favorito:false
     },
@@ -19,8 +20,9 @@ export class ProdutoService {
       id:2,
       imagem:'/assets/produto/image12.png',
       nome:'Smash Burguer',
-      preco:'R$: 00,00 ',
+      preco:50.00,
       quantidade:1,
+      subtotal:0,
       descricao:'Pão Brioche, 80g Angus, Queijo Cheddar e Maionese da Casa.',
       favorito:false
     },
@@ -28,8 +30,9 @@ export class ProdutoService {
       id:3,
       imagem:'/assets/produto/image13.png',
       nome:'Smash Bacon ',
-      preco:'R$: 00,00 ',
+      preco:50.00,
       quantidade:1,
+      subtotal:0,
       descricao:'Pão Briche, 80g Angus, Queijo Cheddar, Bacon, Maionede da Casa.',
       favorito:false
     },
@@ -37,8 +40,9 @@ export class ProdutoService {
       id:4,
       imagem:'/assets/produto/image14.png',
       nome:'Angus Salada',
-      preco:' R$ 00,00',
+      preco:50.00,
       quantidade:1,
+      subtotal:0,
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, Queijo Cheddar, Alface Americana, Tomate, Cebola Roxa e Maionese da Casa.',
       favorito:false
     },
@@ -46,8 +50,9 @@ export class ProdutoService {
       id:5,
       imagem:'/assets/produto/image15.png',
       nome:'Angus Burguer',
-      preco:'R$: 00,00 ',
+      preco:50.00,
       quantidade:1,
+      subtotal:0,
       descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, Queijo Cheddar e Maionese da Casa.',
       favorito:false
     },
@@ -55,13 +60,23 @@ export class ProdutoService {
       id:6,
       imagem:'/assets/produto/image16.png',
       nome:'Angus Bacon',
-      preco:'R$: 00,00 ',
+      preco:50.00,
       quantidade:1,
-      descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, queijoCheddar, Bacon e Maionese da Casa.',
+      subtotal:0,
+      descricao:'Pão Brioche, 180g Angus Grelhado na Parrilla, queijo Cheddar, Bacon e Maionese da Casa.',
       favorito:false
     }
     
   ]
   
   constructor() { }
+
+  calcular(){
+    
+    this.produtos.forEach(el => {
+      this.total += el.subtotal;
+    })
+
+    
+  }
 }
