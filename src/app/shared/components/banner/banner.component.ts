@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent  implements OnInit {
-  fundo ='/assets/img/banner.png';
+  fundo ='/assets/img/frente-estabelecimento.png';
   texto = {
-    subtitulo:'Apenas hoje',
-    titulo:'Hambúrguer Simples',
-    desconto:'Desconto de 20%'
+    subtitulo:'Sejam bem-vindos!',
+    titulo:'CHAMA RÚSTICA',
+    desconto:'uma nova etapa'
   }
 
   constructor() { }
