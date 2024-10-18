@@ -6,8 +6,8 @@
 }
 
 .img-entrar-lanche{
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
 }
 
 .msg-boas{
@@ -16,24 +16,27 @@
     margin-left: 100px;
     margin-top: 120px;
     margin-bottom: 120px;
+    margin-right: 250px;
 }
 
 
 .msg-boas p{
     position: absolute;
-    top: 80px;
-    left: 20px;
+    top: 180px;
+    left: 100px;
     text-align: center;
-    font-size: 25px;
+    font-size: 35px;
+    font-family: "Jaldi", sans-serif;
 }
 
 .msg-boas span{
-    font-size: 35px;    
+    font-size: 80px;
+    font-family: "Bahianita", sans-serif;
+    // box-shadow: 1px 1px black;
 }
 
 .entrar-botoes{
-    margin-left: 250px;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 .entr{
@@ -44,10 +47,11 @@
 
 .entr span{
     position: absolute;
-    top: 10px;
-    left: 120px;
+    top: 0.5px;
+    left: 140px;
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
+    font-family: "Bahianita", sans-serif;
 }
 
 .cad{
@@ -58,10 +62,11 @@
 
 .cad span{
     position: absolute;
-    top: 10px;
-    left: 80px;
+    top: 0.5px;
+    left: 110px;
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
+    font-family: "Bahianita", sans-serif;
 }
 
 .entrar-ou{
