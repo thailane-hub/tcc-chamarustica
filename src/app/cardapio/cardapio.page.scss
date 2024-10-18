@@ -31,7 +31,6 @@
 
 .text h1{
     font-family: "Bahianita", sans-serif;
-    color: var(--branco);
     font-size: 4rem;
 }
 
@@ -39,4 +38,4 @@ a{
     text-decoration: none;
 }
 
-a:hover { text-decoration: underline; }
+.text h1:hover { text-decoration: underline; }
