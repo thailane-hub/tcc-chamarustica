@@ -31,23 +31,11 @@ export class CardapioPage {
     console.log(this.produtoService.produtos);
 
   }
-
   addProduto(produto: any) {
     this.carrinhoService.addProduto(produto);
   }
 
-  incrementer(produto:any){
-    this.carrinhoService.incrementer(produto)
-  }
-
   
-  decrementer(produto:any){
-    this.carrinhoService.decrementer(produto)
-  }
-
-  deletar(produto: any) {
-    this.carrinhoService.deletar(produto)
-  }
 
 }
 

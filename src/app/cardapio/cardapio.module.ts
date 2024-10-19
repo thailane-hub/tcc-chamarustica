@@ -11,6 +11,7 @@ import { BannerRusticoModule } from '../shared/components/banner-rustico/banner-
 import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { BtnAdicionarModule } from '../shared/components/button/btn-adicionar/btn-adicionar.module';
+import { CarrinhoModule } from '../shared/components/carrinho/carrinho.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BtnAdicionarModule } from '../shared/components/button/btn-adicionar/bt
     BannerRusticoModule,
     HeaderModule,
     FooterModule,
-    BtnAdicionarModule
+    BtnAdicionarModule,
+    CarrinhoModule
   ],
   declarations: [CardapioPage]
 })

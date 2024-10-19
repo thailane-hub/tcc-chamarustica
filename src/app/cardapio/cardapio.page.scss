@@ -41,38 +41,6 @@ a{
 
 
 
-.carrinho{
-    z-index: 999;
-    position: fixed;
-    left:70%;
-    bottom: -5px;
-    width: 31%;
-}
-
-.carrinho-titulo{
-
-    font-family: "Bahianita", sans-serif;
-    color:var(--preto);
-    font-size: 1.5rem;
-}
-
-.carrinho-preco{
-    font-family: "Bahianita", sans-serif;
-    color:var(--amarelo);
-    font-size: 1.5rem;
-}
-.list{
-    max-height: 340px;
-    overflow-y: scroll;
-}
-
-.incrementer{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
 ion-row{
     width: 100%;
 }
-
