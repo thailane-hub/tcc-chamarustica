@@ -1,22 +1,51 @@
 <ion-content [fullscreen]="true">
 
   <app-header></app-header>
-    <app-banner></app-banner>
-    <ion-row class="card-container">
-      <ng-container *ngFor="let imagem of this.imagens">
-        <ion-col  size="4" sizelg="3">
-          
-          <ion-card class="custom-card" class="ion-justify-content-around">
-            <ion-img class="custom-img"
-            src="{{imagem.foto}}"
-            alt="#"
-            ></ion-img>
-          </ion-card>
-          
-        </ion-col>
-      </ng-container>
-    </ion-row>
-    <app-banner-inscricao></app-banner-inscricao>
-   <app-footer></app-footer>
+  <app-banner></app-banner>
+
+  <ion-row class="card-container">
+    <ng-container *ngFor="let imagem of this.imagens">
+      <ion-col  size="4" sizelg="3">
+        <ion-card class="custom-card" class="ion-justify-content-around">
+          <ion-img class="custom-img" src="{{imagem.foto}}"></ion-img>
+        </ion-card>  
+      </ion-col>
+    </ng-container>
+   </ion-row>
+
+  <app-banner-inscricao></app-banner-inscricao>
+
+  <ion-row class="ion-justify-content-center" id="cards-homepage">
+
+    <ion-col size="3.7" class="ion-margin">
+      <ion-card color="primary" class="ion-text-center">
+        <ion-card-header>
+          <ion-card-title>Chopp & Burger</ion-card-title>
+        </ion-card-header>
+        <ion-card-content> Opções perfeitas para você fazer o seu Happy Hour ou escolher pelo tradicional lanche. </ion-card-content>
+      </ion-card>
+    </ion-col>
+    
+    <ion-col size="3.7" class="ion-margin">
+      <ion-card color="secondary" class="ion-text-center">
+        <ion-card-header>
+          <ion-card-title>Ambiente ao Ar livre</ion-card-title>
+        </ion-card-header>
+        <ion-card-content> Perfeito para qualquer ocasião, seja em casal, amigos ou família, o nosso ambiente proporciona o melhor. </ion-card-content>
+      </ion-card>
+    </ion-col>
+    
+    <ion-col size="3.7" class="ion-margin">
+      <ion-card color="tertiary" class="ion-text-center">
+        <ion-card-header>
+          <ion-card-title>Burgers grelhados em Parrilla</ion-card-title>
+        </ion-card-header>
+        <ion-card-content> Diferente de todas as experiências que você já teve! Simplesmente o mais saboroso. </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+  
+  <app-footer></app-footer>
 
 </ion-content>
