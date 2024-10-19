@@ -64,10 +64,10 @@
                         <ion-icon name="trash-bin-outline"(click)="deletar(produto)"></ion-icon>
                       </ng-container>
                       <ng-container *ngIf="produto.quantidade>1">
-                        <ion-icon name="remove-outline" (click)="remove(produto)"></ion-icon>
+                        <ion-icon name="remove-outline" (click)="decrementer(produto)"></ion-icon>
                       </ng-container>
                       <ion-label>{{produto.quantidade}}</ion-label>
-                      <ion-icon name="add-outline" (click)="add(produto)"></ion-icon>
+                      <ion-icon name="add-outline" (click)="incrementer(produto)"></ion-icon>
                     </ion-col>
 
                     <ion-col size="12">
@@ -79,7 +79,7 @@
                 </ion-item>
               </ng-container>
               <ion-item size="12">
-                <ion-label>{{ this.produtoService.total }}</ion-label>
+                <ion-label>{{ this.carrinhoService.total }}</ion-label>
               </ion-item>
         
             </ion-list>

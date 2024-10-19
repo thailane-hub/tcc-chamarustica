@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProdutoService {
-  total:number=0;
   produtos =[
     {
       id:1,
@@ -69,15 +68,15 @@ export class ProdutoService {
     
   ]
   
-  constructor() { }
+  constructor() {   }
 
-  calcular(){
-    
-    this.produtos.forEach(el => {
-      this.total += el.subtotal;
-      // this.total -= el.subtotal;
-    })
-
-    
+  
   }
-}
+
+
+
+
+
+
+
+

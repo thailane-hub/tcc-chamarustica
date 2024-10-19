@@ -4,23 +4,71 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CarrinhoService {
+  total: number =0;
 
-  public produtos: any[] = [];
+  public carrinho: any[] = [];
 
-  constructor() {}
+  constructor() {
+    this.atualizarSubtotal()
+  }
 
   addProduto(produto: any) {
-    let produtoexiste = this.produtos.find(item => item.id === produto.id );
-
-    console.log(this.produtos)
-
-    if (!produtoexiste) 
-      this.produtos.push(produto);
+    let produtoexiste = this.carrinho.find(item => item.id === produto.id );
+    if (!produtoexiste) {
+      this.carrinho.push(produto);
+      this.atualizarSubtotal();
+    }
     
   }
 
   getcarrinhoItens() {
-    return this.produtos;
+    return this.carrinho;
+  }
+
+  getTotal(){
+
+    let total: number = 0;
+    this.carrinho.forEach(item => {
+      total += item.subtotal;
+    }) 
+    return total;
+  }
+
+  atualizarSubtotal(){
+    this.carrinho.forEach(item => {
+        item.subtotal= (item.quantidade * item.preco)
+    })
+    this.total = this.getTotal();
+  }
+
+  incrementer(produto:any){
+    this.carrinho.forEach(item => {
+      if(item.id === produto.id){
+        item.quantidade++
+        this.atualizarSubtotal()
+      }
+    })
+ 
+  }
+
+  decrementer(produto:any){
+    this.carrinho.forEach(item => {
+      if(item.id === produto.id){
+        if(item.quantidade > 1)
+          item.quantidade--
+        this.atualizarSubtotal()
+      }
+    })
+
+  }
+
+  deletar(produto: any) {
+    const index = this.carrinho.findIndex(item => item.id === produto.id);
+    
+    if (index !== -1) {
+         this.carrinho.splice(index, 1);
+         this.atualizarSubtotal()
+    } 
   }
 
   

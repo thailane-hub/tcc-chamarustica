@@ -36,35 +36,17 @@ export class CardapioPage {
     this.carrinhoService.addProduto(produto);
   }
 
-  add(produto:any){
-    this.carrinhoService.produtos.forEach(el => {
-      if(el.id === produto.id){
-        el.quantidade++
-        el.subtotal= (el.quantidade * el.preco)
-      }
-    })
-    this.produtoService.calcular()
+  incrementer(produto:any){
+    this.carrinhoService.incrementer(produto)
   }
 
   
-  remove(produto:any){
-    this.carrinhoService.produtos.forEach(el => {
-      if(el.id === produto.id){
-        if(el.quantidade > 1)
-          el.quantidade--
-        el.subtotal= (el.quantidade * el.preco)
-      }
-    })
-    this.produtoService.calcular()
+  decrementer(produto:any){
+    this.carrinhoService.decrementer(produto)
   }
 
   deletar(produto: any) {
-    const index = this.carrinhoService.produtos.findIndex(el => el.id === produto.id);
-    
-    if (index !== -1) {
-         this.carrinhoService.produtos.splice(index, 1);
-         this.produtoService.calcular()
-    } 
+    this.carrinhoService.deletar(produto)
   }
 
 }
