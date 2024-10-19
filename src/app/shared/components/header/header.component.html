@@ -19,9 +19,42 @@
         <ion-button routerLink="/entrar" color="light" fill="clear">Entrar</ion-button>
       </ion-item>
 
-      <ion-popover trigger="left-start" side="left" alignment="start" size="large">
+      <ion-popover trigger="left-start" side="left" alignment="start" size="auto">
         <ng-template>
-          <ion-content class="ion-padding">Aberto todos os dias, das 18:00 até as 00:00</ion-content>
+          <ion-content class="ion-padding">
+            <ion-label> <h1>Horário de funcionamento</h1> </ion-label>
+            <ion-list>
+              <ion-item>
+                <ion-label>Seg.</ion-label>
+                <ion-label slot="end">17:00 às 01:00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Ter.</ion-label>
+                <ion-label slot="end">17:00 às 01:00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Qua.</ion-label>
+                <ion-label slot="end">17:00 às 01:00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Qui.</ion-label>
+                <ion-label slot="end">17:00 às 01:00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Sex.</ion-label>
+                <ion-label slot="end">17:00 às 01:00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Sáb.</ion-label>
+                <ion-label slot="end">17:00 às 01:00</ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>Dom.</ion-label>
+                <ion-label slot="end">17:00 às 01:00</ion-label>
+              </ion-item>
+            </ion-list>
+            
+            </ion-content>
         </ng-template>
       </ion-popover>
 
