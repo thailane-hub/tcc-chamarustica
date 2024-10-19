@@ -44,14 +44,14 @@
     padding: 10px;
 }
 
-.banner-container{
+#banner-container{
     background: url("/assets/img/fundorusticoh.png");
     background-repeat: no-repeat;
     background-position: center right;
     background-size: contain;
     height: 420px;
     background-color: #D9D9D9;
-
+    padding-top: 50px;
 }
 
 .phone-img{
@@ -74,6 +74,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family: "Bahianita", sans-serif;
+    font-size: 6rem;  
 }
 
 .subtitulo{
@@ -83,6 +85,7 @@
     font-size: 6rem;  
     border-top-left-radius:5rem ;
     border-bottom-left-radius: 5rem;
+    width: 550px;
 }
 
 .text{
