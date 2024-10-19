@@ -1,23 +1,35 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
+
   <app-banner-rustico texto="Eventos"></app-banner-rustico>
   <ion-row class="banner">
     <ion-col >
-      <img src="{{banner.imagem}}" alt="" class="banner-img">
+      <img src="{{banner.imagem}}" class="banner-img">
     </ion-col>
   </ion-row>
+
   <ion-row>
     <ng-container *ngFor="let card of this.cards">
-      <ion-col class="card-container" size="12" size-md="4">
-        <div class="label">
-          <label class="card-label">{{card.date}}</label>
-        </div>
-        <div class="card-div">
-          <img src="{{card.image}}" alt="" class="card-img">
-        </div>
-      </ion-col>
+        <ion-col class="card-container" size="12" size-md="4" id="{{card.id}}">
+          <div class="label">
+            <label class="card-label">{{card.date}}</label>
+          </div>
+          <div class="card-div">
+            <img src="{{card.image}}" alt="" class="card-img">
+          </div>
+        </ion-col>
     </ng-container>
   </ion-row>
+
+  <ng-container *ngFor="let alert of this.alerta">
+    <ion-alert
+    trigger="{{alert.id}}"
+    header="{{alert.titulo}}"
+    subHeader="{{alert.subtitulo}}"
+    message="{{alert.mensagem}}"
+    [buttons]="alertButtons"
+    ></ion-alert>
+  </ng-container>
 
   <ion-row id="banner-container" class="ion-justify-content-center" >
     <ion-col >  
@@ -26,8 +38,8 @@
 
     <ion-col size="12" size-lg="5" class="texto">
       <div>
-        <label >
-            Você tem interesse em se apresentar em nosso local? Deixe seu contato!
+        <label>
+            Você tem interesse em se apresentar em nosso local? <br> Deixe seu contato!
         </label>
         <app-btn-adicionar texto="Inscreva-se" icone="person"></app-btn-adicionar>
       </div>
