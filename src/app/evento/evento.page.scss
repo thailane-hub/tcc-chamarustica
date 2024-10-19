@@ -31,8 +31,8 @@
 
 .label{
     position: absolute;
-    top: 10%;
-    left:18%;
+    top: 9%;
+    left: 46%;
     padding: 50px;
 }
 
@@ -70,7 +70,7 @@
     align-items: center;
     text-align: center;
     font-size: 1.5rem;
-    color:var(--preto);
+    color: var(--preto);
 }
 
 .titulo{
@@ -84,11 +84,11 @@
 .subtitulo{
     font-family: "Bahianita", sans-serif;
     background-color: var(--amarelo);
-    color:var(--verde);
+    color: var(--verde);
     font-size: 6rem;  
-    border-top-left-radius:5rem ;
+    border-top-left-radius: 5rem ;
     border-bottom-left-radius: 5rem;
-    width: 550px;
+    width: 400px;
 }
 
 .text{

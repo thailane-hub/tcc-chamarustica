@@ -15,18 +15,18 @@ export class EventoPage implements OnInit {
   cards = [
 
    {
-    image:'https://img.freepik.com/fotos-premium/uma-guitarra-senta-se-ao-lado-de-uma-parede-de-madeira_1001772-5993.jpg?w=360',
-    date:'Sábado/28',
+    image:'../../assets/img/MJ-evento.png',
+    date:'Sexta/13',
     id: 1
    },
    {
-    image:'https://img.freepik.com/fotos-premium/uma-guitarra-senta-se-ao-lado-de-uma-parede-de-madeira_1001772-5993.jpg?w=360',
-    date:'Sábado/28',
+    image:'../../assets/img/lana-evento.png',
+    date:'Sexta/25',
     id: 2
    },
    {
-    image:'https://img.freepik.com/fotos-premium/uma-guitarra-senta-se-ao-lado-de-uma-parede-de-madeira_1001772-5993.jpg?w=360',
-    date:'Sábado/28',
+    image:'../../assets/img/baco-evento.png',
+    date:'Sexta/15',
     id: 3
    }
 
@@ -35,8 +35,8 @@ export class EventoPage implements OnInit {
   alerta = [
     {
       titulo: 'SAVE THE DATE',
-      subtitulo: '11/12',
-      mensagem: 'Nesta quarta-feira venha prestigiar o cantor Michael Jackson cantando POP!',
+      subtitulo: '13/01',
+      mensagem: 'Nesta sexta-feira venha prestigiar o cantor Michael Jackson cantando POP!',
       id: 1
     },
     {
@@ -47,8 +47,8 @@ export class EventoPage implements OnInit {
     },
     {
       titulo: 'SAVE THE DATE',
-      subtitulo: '06/01',
-      mensagem: 'Nesta segunda-feira venha prestigiar o cantor Baco Exu do Blues cantando BLUES!',
+      subtitulo: '15/11',
+      mensagem: 'Nesta sexta-feira venha prestigiar o cantor Baco Exu do Blues cantando BLUES!',
       id: 3
     }
   ]
