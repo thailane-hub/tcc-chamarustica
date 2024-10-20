@@ -7,10 +7,6 @@
 
     .carrinho{
         z-index: 999;
-        position: fixed;
-        left:70%;
-        bottom: -5px;
-        width: 31%;
     }
 
     .carrinho-titulo{
@@ -33,6 +29,7 @@
 
     .fab-icon{
         bottom: -160%;
+        width: 100%;
     }
 
     ion-fab-botton{
@@ -43,4 +40,5 @@
         align-items: center;
     }
     
+      
 
