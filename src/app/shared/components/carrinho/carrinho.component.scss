@@ -1,32 +1,46 @@
-.carrinho{
-    z-index: 999;
-    position: fixed;
-    left:70%;
-    bottom: -5px;
-    width: 31%;
-}
+    .container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+    }
 
-.carrinho-titulo{
+    .carrinho{
+        z-index: 999;
+        position: fixed;
+        left:70%;
+        bottom: -5px;
+        width: 31%;
+    }
 
-    font-family: "Bahianita", sans-serif;
-    color:var(--preto);
-    font-size: 1.5rem;
-}
+    .carrinho-titulo{
 
-.carrinho-preco{
-    font-family: "Bahianita", sans-serif;
-    color:var(--amarelo);
-    font-size: 1.5rem;
-}
-.list{
-    max-height: 340px;
-    overflow-y: scroll;
-}
+        font-family: "Bahianita", sans-serif;
+        font-size: 1.4rem;
+    }
 
-.incrementer{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
 
+    .list{
+        max-height: 340px;
+        overflow-y: scroll;
+    }
+
+    .incrementer{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .fab-icon{
+        bottom: -160%;
+    }
+
+    ion-fab-botton{
+        background-color: var(--verde);
+    }
+    .finalizar{
+        display: flex;
+        align-items: center;
+    }
+    
 

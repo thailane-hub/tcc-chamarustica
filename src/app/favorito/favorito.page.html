@@ -17,7 +17,7 @@
              <ion-card-content>
                {{produto.descricao}}
              </ion-card-content>
-             <app-btn-adicionar texto="Adicionar"></app-btn-adicionar>
+             <app-btn-adicionar texto="Adicionar"  (click)="addProduto(produto)"></app-btn-adicionar>
            </ion-card>
       </ion-col>
     </ng-container>

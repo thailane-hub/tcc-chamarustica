@@ -29,5 +29,8 @@ export class FavoritoPage implements OnInit {
     }
   )
  }
+ addProduto(produto: any) {
+  this.carrinhoService.addProduto(produto);
+}
 
 }

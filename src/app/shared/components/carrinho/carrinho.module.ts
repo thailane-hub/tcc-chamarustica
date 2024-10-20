@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarrinhoComponent } from './carrinho.component';
 import { IonicModule } from '@ionic/angular';
+import { BtnAdicionarModule } from '../button/btn-adicionar/btn-adicionar.module';
 
 
 
@@ -9,9 +10,8 @@ import { IonicModule } from '@ionic/angular';
   declarations: [CarrinhoComponent],
   imports: [
     CommonModule,
-    IonicModule
-    
-  
+    IonicModule,
+    BtnAdicionarModule,  
   ],
   exports: [
     CarrinhoComponent
