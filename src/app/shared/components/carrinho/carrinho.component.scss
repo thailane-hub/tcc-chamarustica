@@ -28,8 +28,12 @@
     }
 
     .fab-icon{
+        left: 40%;
         bottom: -160%;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     ion-fab-botton{
@@ -40,5 +44,10 @@
         align-items: center;
     }
     
-      
-
+    @media(max-width:768px)
+    {
+        .fab-icon{
+            bottom: -563%;
+            left: 10%;
+        }
+    }
