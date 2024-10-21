@@ -14,7 +14,7 @@ export class ProdutoService {
       preco: 29.90,
       quantidade: 1,
       subtotal: 0,
-      descricao: 'Pão Brioche, 2x 80g Angus, Queijo Cheddar, Aface Americana e Molho Especial.',
+      descricao: 'Pão Brioche, 2x 80g angus, Queijo Cheddar, Aface americana e Molho especial',
       favorito: false
     },
     {
@@ -24,7 +24,7 @@ export class ProdutoService {
       preco: 22.90,
       quantidade: 1,
       subtotal: 0,
-      descricao: 'Pão Brioche, 80g Angus, Queijo Cheddar e Maionese da Casa.',
+      descricao: 'Pão Brioche, 80g Angus, Queijo Cheddar e Maionese da Casa',
       favorito: false
     },
     {
@@ -34,7 +34,7 @@ export class ProdutoService {
       preco: 20.90,
       quantidade: 1,
       subtotal: 0,
-      descricao: 'Pão Briche, 80g Angus, Queijo Cheddar, Bacon, Maionede da Casa.',
+      descricao: 'Pão Brioche, 80g Angus, Queijo Cheddar, Bacon, Maionede da casa',
       favorito: false
     },
     {
@@ -44,7 +44,7 @@ export class ProdutoService {
       preco: 32.90,
       quantidade: 1,
       subtotal: 0,
-      descricao: 'Pão Brioche, 180g Angus Grelhado na Parrilla, Queijo Cheddar, Alface Americana, Tomate, Cebola Roxa e Maionese da Casa.',
+      descricao: 'Pão Brioche, 180g Angus grelhado na parrilla, Queijo cheddar, Alface americana, Tomate, Cebola roxa e Maionese da casa',
       favorito: false
     },
     {
@@ -54,7 +54,7 @@ export class ProdutoService {
       preco: 26.90,
       quantidade: 1,
       subtotal: 0,
-      descricao: 'Pão Brioche, 180g Angus Grelhado na Parrilla, Queijo Cheddar e Maionese da Casa.',
+      descricao: 'Pão Brioche, 180g Angus grelhado na parrilla, Queijo cheddar e Maionese da casa',
       favorito: false
     },
     {
@@ -64,7 +64,7 @@ export class ProdutoService {
       preco: 30.90,
       quantidade: 1,
       subtotal: 0,
-      descricao: 'Pão Brioche, 180g Angus Grelhado na Parrilla, queijo Cheddar, Bacon e Maionese da Casa.',
+      descricao: 'Pão Brioche, 180g Angus grelhado na parrilla, Queijo cheddar, Bacon e Maionese da casa',
       favorito: false
     },
     {
@@ -74,7 +74,7 @@ export class ProdutoService {
       preco: 19.90,
       quantidade: 1,
       subtotal: 0,
-      descricao: '2 Mini Burgers, Pão mini brioche, smash angus 40 + refri 200ml + batata frita 150g ou nuggets (06 unidades)',
+      descricao: '2 Mini Burgers, Pão mini brioche, Smash angus 40 + Refri 200ml + Batata frita 150g ou Nuggets (06 unidades)',
       favorito: false
     }
     
