@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { BannerComponent } from './banner.component';
 
-
-
 @NgModule({
   declarations: [BannerComponent],
   imports: [
@@ -14,6 +12,6 @@ import { BannerComponent } from './banner.component';
   exports:[
     BannerComponent
   ]
-
 })
+
 export class BannerModule { }

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent  implements OnInit {
+  
   fundo ='/assets/img/frente-estabelecimento.png';
   texto = {
     subtitulo:'Sejam bem-vindos!',

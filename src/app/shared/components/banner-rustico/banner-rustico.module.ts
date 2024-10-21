@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { BannerRusticoComponent } from './banner-rustico.component';
 
-
-
 @NgModule({
   declarations: [BannerRusticoComponent],
   imports: [
@@ -15,4 +13,5 @@ import { BannerRusticoComponent } from './banner-rustico.component';
     BannerRusticoComponent
   ]
 })
+
 export class BannerRusticoModule { }

@@ -4,8 +4,6 @@ import { CarrinhoComponent } from './carrinho.component';
 import { IonicModule } from '@ionic/angular';
 import { BtnAdicionarModule } from '../button/btn-adicionar/btn-adicionar.module';
 
-
-
 @NgModule({
   declarations: [CarrinhoComponent],
   imports: [

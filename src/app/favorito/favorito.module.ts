@@ -1,11 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
 import { FavoritoPageRoutingModule } from './favorito-routing.module';
-
 import { FavoritoPage } from './favorito.page';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { HeaderModule } from '../shared/components/header/header.module';

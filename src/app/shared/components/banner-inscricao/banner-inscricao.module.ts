@@ -4,8 +4,6 @@ import { IonicModule } from '@ionic/angular';
 import { BannerInscricaoComponent } from './banner-inscricao.component';
 import { BtnAdicionarModule } from '../button/btn-adicionar/btn-adicionar.module';
 
-
-
 @NgModule({
   declarations: [BannerInscricaoComponent],
   imports: [
@@ -17,4 +15,5 @@ import { BtnAdicionarModule } from '../button/btn-adicionar/btn-adicionar.module
     BannerInscricaoComponent
   ]
 })
+
 export class BannerInscricaoModule { }

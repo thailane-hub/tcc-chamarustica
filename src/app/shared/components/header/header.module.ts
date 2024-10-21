@@ -4,8 +4,6 @@ import { HeaderComponent } from './header.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterLink } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent
@@ -19,4 +17,5 @@ import { RouterLink } from '@angular/router';
     HeaderComponent
   ]
 })
+
 export class HeaderModule { }

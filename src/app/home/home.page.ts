@@ -11,10 +11,9 @@ import { MessageService } from '../services/message.service';
 })
 export class HomePage {
   imagens = [
-    {foto:'/assets/img/burger1.png'},
-    {foto:'/assets/img/burger2.png'},
-    {foto:'/assets/img/burger3.png'},
-    
+    { foto: '/assets/img/burger1.png' },
+    { foto: '/assets/img/burger2.png' },
+    { foto: '/assets/img/burger3.png' }
   ]
 
   constructor(){ }

@@ -38,68 +38,61 @@
     font-family: "Jaldi", sans-serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
   
-  .jaldi-bold {
-    font-family: "Jaldi", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+.jaldi-bold {
+  font-family: "Jaldi", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
-  .bahianita {
-    font-family: "Bahianita", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+.bahianita {
+  font-family: "Bahianita", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}  
 
-  
+.bahianita-regular {
+  font-family: "Bahianita", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:var(--branco);
+  font-size: 2.5rem;
+}
 
-  .bahianita-regular {
-    font-family: "Bahianita", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color:var(--branco);
-    font-size: 2.5rem;
-  }
+.bahianita-regular-yellow {
+  font-family: "Bahianita", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:var(--amarelo);
+  font-size: 2rem;
+}
 
-  .bahianita-regular-yellow {
-    font-family: "Bahianita", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color:var(--amarelo);
-    font-size: 2rem;
-  }
+.bahianita-regular-large {
+  font-family: "Bahianita", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:var(--branco);
+  font-size: 5rem;
+}
 
-    .bahianita-regular-large {
-        font-family: "Bahianita", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color:var(--branco);
-        font-size: 5rem;
-    }
+.card-titulo{
+  font-family: "Bahianita", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3rem;
+}
 
-    .card-titulo{
-      font-family: "Bahianita", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 3rem;
-    }
+.card-preco{
+  font-family: "Bahianita", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
 
-    .card-preco{
-      font-family: "Bahianita", sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 2rem;
-    }
-    .card-descricao{
-    font-family: "Jaldi", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.4rem;
-
-
-    }
-
-    
-
- 
+.card-descricao{
+  font-family: "Jaldi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.4rem;
+}

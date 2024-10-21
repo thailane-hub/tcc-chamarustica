@@ -90,5 +90,4 @@ export class AuthenticateService {
         if (!!!password) this.message = 'Preencha a senha com 6 caracteres.';
         this._message.show(this.message, this.duration);
     }
-
 }

@@ -9,7 +9,6 @@ import { CarrinhoService } from '../services/carrinho.service';
 })
 export class FavoritoPage implements OnInit {
 
-
   constructor(
     public produtoService:ProdutoService,
     public carrinhoService:CarrinhoService
@@ -29,6 +28,7 @@ export class FavoritoPage implements OnInit {
     }
   )
  }
+
  addProduto(produto: any) {
   this.carrinhoService.addProduto(produto);
 }

@@ -12,13 +12,12 @@
     height: 250px;
 }
 
-.texto {
+.texto{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center; 
-
-  }
+}
 
 h1{
     font-size: 12rem;
@@ -36,4 +35,3 @@ h1{
         color: var(--branco);
     }
 }
-

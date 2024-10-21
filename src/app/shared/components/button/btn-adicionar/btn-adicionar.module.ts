@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { BtnAdicionarComponent } from './btn-adicionar.component';
 
-
-
 @NgModule({
   declarations: [BtnAdicionarComponent],
   imports: [
@@ -15,4 +13,5 @@ import { BtnAdicionarComponent } from './btn-adicionar.component';
     BtnAdicionarComponent
   ]
 })
+
 export class BtnAdicionarModule { }

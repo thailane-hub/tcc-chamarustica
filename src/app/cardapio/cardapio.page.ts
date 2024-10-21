@@ -8,9 +8,8 @@ import { CarrinhoService } from '../services/carrinho.service';
   templateUrl: './cardapio.page.html',
   styleUrls: ['./cardapio.page.scss'],
 })
+
 export class CardapioPage {
-
-
 
   constructor(
     public produtoService:ProdutoService,
@@ -31,12 +30,9 @@ export class CardapioPage {
     console.log(this.produtoService.produtos);
 
   }
+
   addProduto(produto: any) {
     this.carrinhoService.addProduto(produto);
   }
 
-  
-
 }
-
-

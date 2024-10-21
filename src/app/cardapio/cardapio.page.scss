@@ -1,4 +1,3 @@
-
 .card-container{
     display: flex;
     flex-direction: column;
@@ -6,13 +5,14 @@
     flex-wrap: wrap;
     padding: 20px;   
 }
-.card-preco{
-    font-family: "Jaldi", sans-serif;
-}
+
+.card-preco{ font-family: "Jaldi", sans-serif; }
+
 .card-img{
     width: 527px;
     height: 329px;
 }
+
 .icon-img{
     position: absolute;
     top: 0;
@@ -21,13 +21,13 @@
     width: 48px;
     height: 48px;
 }
+
 .text{
     display:flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     height:100px;
-   
 }
 
 .text h1{
@@ -35,14 +35,8 @@
     font-size: 4rem;
 }
 
-a{
-    text-decoration: none;
-}
+a{ text-decoration: none; }
 
 .text h1:hover { text-decoration: underline; }
 
-
-
-ion-row{
-    width: 100%;
-}
+ion-row{ width: 100%; }

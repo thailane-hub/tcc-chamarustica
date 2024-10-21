@@ -1,46 +1,15 @@
 .botao{
-    margin-top: 25px;
+    margin-top: 80px;
     margin-right: 200px;
     gap: 20px;
     display: flex;
 }
 
-.card-img{
-    z-index: 0;
-    height: 163px;
-    width: 170px;
-    border-radius: 5px;
-}
-
-.icon-img{
-    position: absolute;
-    border-radius: 100%;
-    left: 5px;
-    height: 25px;
-    z-index: 10;
-}
-
-.card-container{
+.display{
     display: flex;
-    padding-top: 10px;
 }
 
-.qtds{
-    background-color: #d9d9d9;
-    border-radius: 5px;
-    margin-top: 40px;
-    justify-content: center;
-    width: 101px;
-    height: 28px;
-}
-
-span{
-    color: #10893e;
-    font-size: 1.4rem;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.minimus{
-    padding-left: 15px;
+.revisao h1{
+    font-family: "Bahianita", sans-serif;
+    font-size: 3rem;
 }

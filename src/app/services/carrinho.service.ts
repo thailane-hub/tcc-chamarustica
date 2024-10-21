@@ -70,6 +70,4 @@ export class CarrinhoService {
          this.atualizarSubtotal()
     } 
   }
-
-  
 }

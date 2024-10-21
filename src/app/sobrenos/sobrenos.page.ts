@@ -9,7 +9,6 @@ export class SobrenosPage implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
