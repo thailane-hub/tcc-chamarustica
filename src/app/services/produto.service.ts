@@ -20,8 +20,8 @@ export class ProdutoService {
     {
       id: 2,
       imagem: '/assets/produto/image12.png',
-      nome: 'Smash Burguer',
-      preco: 16.90,
+      nome: 'Smash Burguer (duplo)',
+      preco: 22.90,
       quantidade: 1,
       subtotal: 0,
       descricao: 'Pão Brioche, 80g Angus, Queijo Cheddar e Maionese da Casa.',
@@ -65,6 +65,16 @@ export class ProdutoService {
       quantidade: 1,
       subtotal: 0,
       descricao: 'Pão Brioche, 180g Angus Grelhado na Parrilla, queijo Cheddar, Bacon e Maionese da Casa.',
+      favorito: false
+    },
+    {
+      id: 7,
+      imagem: '/assets/produto/anguskid.png',
+      nome: 'Angus Kids',
+      preco: 19.90,
+      quantidade: 1,
+      subtotal: 0,
+      descricao: '2 Mini Burgers, Pão mini brioche, smash angus 40 + refri 200ml + batata frita 150g ou nuggets (06 unidades)',
       favorito: false
     }
     
