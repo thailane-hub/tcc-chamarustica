@@ -16,10 +16,10 @@
      <ion-col size="12" sizelg="4" size-md="4" class="card-container">
       <ion-card>
             <ng-container *ngIf="produto.favorito">
-           <img src="https://cdn1.iconfinder.com/data/icons/macster/70/.svg-17-512.png" class="icon-img" (click)="favoritar(produto)">
+           <img src="/assets/icon/star.png" class="icon-img" (click)="favoritar(produto)">
          </ng-container>
          <ng-container *ngIf="!produto.favorito">
-           <img src="https://img.icons8.com/?size=48&id=19295&format=png" class="icon-img"  (click)="favoritar(produto)">
+           <img src="/assets/icon/starOff.png" class="icon-img"  (click)="favoritar(produto)">
          </ng-container>
           <img class="card-img" alt="" src="{{produto.imagem}}" />
           <ion-card-header>

@@ -31,7 +31,7 @@ export class CarrinhoService {
     this.carrinho.forEach(item => {
       total += item.subtotal;
     }) 
-    return total;
+    return total
   }
 
   atualizarSubtotal(){
