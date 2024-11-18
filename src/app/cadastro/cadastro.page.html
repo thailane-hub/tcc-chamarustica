@@ -1,67 +1,69 @@
-<app-header></app-header>
+  <app-header></app-header>
 
-<ion-content [fullscreen]="true">
+  <ion-content [fullscreen]="true">
 
-  <ion-row class="ion-justify-content-center">
-    <ion-col size="12" size-lg="6">
-      <form #criarContaForm="ngForm" (ngSubmit)="criarConta(criarContaForm.value)">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" size-lg="6"  class="ion-margin ion-padding">
+        <form #criarContaForm="ngForm" (ngSubmit)="criarConta(criarContaForm.value)">
 
-        <ion-item class="list">
-          <ion-input
-          type="text"
-          name="email"
-          fill="solid"
-          label="Usuário"
-          labelPlacement="floating"
-          text
-          ngModel
-          ></ion-input>
-          </ion-item>
-        
-          <ion-item>
+          <ion-item class="list">
             <ion-input
-            type="tel"
-            name="telefone"
+            type="text"
+            name="email"
             fill="solid"
-            label="Telefone"
+            label="Usuário"
             labelPlacement="floating"
             ngModel
+            required
             ></ion-input>
-          </ion-item>
+            </ion-item>
           
-          <ion-item>
+            <ion-item>
+              <ion-input
+              type="text"
+              name="telefone"
+              fill="solid"
+              label="Telefone"
+              labelPlacement="floating"
+              ngModel
+              required
+              ></ion-input>
+            </ion-item>
             
-            <ion-input
-            type="password"
-            name="password"
-            fill="solid"
-            label="Senha"
-            labelPlacement="floating"
-            ngModel
-            ></ion-input>
-          </ion-item>
-          
-          
           <ion-item>
-            
+            <ion-label position="floating">Senha</ion-label>
             <ion-input
-            type="password"
-            name="confirmPassword"
-            fill="solid"
-            label="Confirmar Senha"
-            labelPlacement="floating"
-            ngModel
-            ></ion-input>
+              type="password"
+              name="password"
+              [(ngModel)]="password"
+              (ngModelChange)="validarSenha()"
+              required
+              ></ion-input>
           </ion-item>
-          
-          <div class="button">
-            <ion-button color="success" shape="round" type="submit" class="ion-padding">Cadastrar</ion-button>
-          </div>
-          
-        </form>
-    </ion-col>
-  </ion-row>
 
-</ion-content>
+          <ion-item>
+            <ion-label position="floating">Confirmar Senha</ion-label>
+            <ion-input
+              type="password"
+              name="confirmPassword"
+              [(ngModel)]="confirmPassword"
+              (ngModelChange)="validarSenha()"
+              required>
+            </ion-input>
+          </ion-item>
 
-<app-footer></app-footer>
+  
+          <ion-text color="danger" *ngIf="errorMessage">
+            {{ errorMessage }}
+          </ion-text>
+          <ion-col class="button">
+            <ion-button  shape="round"color="success" type="submit" class="ion-padding" [disabled]="!password || !confirmPassword"> Cadastrar </ion-button>
+          </ion-col>
+                
+      </form>
+      </ion-col>
+    </ion-row>
+
+  </ion-content>
+
+  <app-footer></app-footer>
