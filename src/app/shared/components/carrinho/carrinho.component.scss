@@ -17,6 +17,7 @@
 .list{
     max-height: 340px;
     overflow-y: scroll;
+    width: 100%;
 }
 
 .incrementer{
@@ -27,15 +28,6 @@
 
 
 
-.fab-icon{
-    left: 30%;
-    bottom: -230%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 ion-fab-botton{
     background-color: var(--verde);
 }
@@ -44,6 +36,7 @@ ion-fab-botton{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
     
 }
 
@@ -55,8 +48,38 @@ ion-fab-botton{
 
 @media(max-width:768px)
 {
-    .fab-icon{
-        bottom: -563%;
-        left: 10%;
-    }
+    // .carrinho-titulo{
+    //     font-size: 1rem;
+    // }
+ 
+    
 }
+
+
+ion-accordion {
+    position: fixed; 
+    bottom: 16px;   
+    right: 16px;    
+    margin: 0;  
+    max-width: 100%;  
+    width: 300px;   
+  }
+  
+  ion-accordion.accordion-expanding,
+  ion-accordion.accordion-expanded {
+    width: auto;
+    margin: 0;   
+  }
+  
+  ion-accordion.accordion-collapsing ion-item[slot='header'],
+  ion-accordion.accordion-collapsed ion-item[slot='header'] {
+    --background: var(--ion-color-success);
+    --color: var(--ion-color-primary);
+  }
+  
+  ion-accordion.accordion-expanding ion-item[slot='header'],
+  ion-accordion.accordion-expanded ion-item[slot='header'] {
+    --background: var(--ion-color-success);
+    --color: var(--ion-color-primary);
+  }
+  

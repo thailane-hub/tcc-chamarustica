@@ -1,59 +1,67 @@
 <app-header></app-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list class="container" >
-    <ion-item class="list">
-      <ion-input
-      type="text"
-      fill="solid"
-      label="Usuário"
-      labelPlacement="floating"
-      helperText="Enter para confirmar"
-      errorText="Usuário invalido"
-      ngModel
-      text
-     ></ion-input>
-    </ion-item>
-  
-    <ion-item>
-      <ion-input
-      type="tel"
-      fill="solid"
-      label="Telefone"
-      labelPlacement="floating"
-      helperText="Digite um número de telefone válido"
-      errorText="Número de telefone inválido"
-      ngModel
-      ></ion-input>
-    </ion-item>
-  
-    <ion-item>
-     
-      <ion-input
-      type="password"
-      fill="solid"
-      label="Senha"
-      labelPlacement="floating"
-      helperText="Digite uma senha segura"
-      errorText="Senha inválida"
-      ngModel
-      ></ion-input>
-    </ion-item>
-  
-    <ion-item>
-     
-      <ion-input
-      type="password"
-      fill="solid"
-      label="Repetir Senha"
-      labelPlacement="floating"
-      helperText="Repita a senha para confirmação"
-      errorText="As senhas não coincidem"
-      ngModel
-      ></ion-input>
-    </ion-item>
 
-  </ion-list>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="6">
+      <form #criarContaForm="ngForm" (ngSubmit)="criarConta(criarContaForm.value)">
+
+        <ion-item class="list">
+          <ion-input
+          type="text"
+          name="email"
+          fill="solid"
+          label="Usuário"
+          labelPlacement="floating"
+          text
+          ngModel
+          ></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input
+            type="tel"
+            name="telefone"
+            fill="solid"
+            label="Telefone"
+            labelPlacement="floating"
+            ngModel
+            ></ion-input>
+          </ion-item>
+          
+          <ion-item>
+            
+            <ion-input
+            type="password"
+            name="password"
+            fill="solid"
+            label="Senha"
+            labelPlacement="floating"
+            ngModel
+            ></ion-input>
+          </ion-item>
+          
+          
+          <ion-item>
+            
+            <ion-input
+            type="password"
+            name="confirmPassword"
+            fill="solid"
+            label="Confirmar Senha"
+            labelPlacement="floating"
+            ngModel
+            ></ion-input>
+          </ion-item>
+          
+          <div class="button">
+            <ion-button color="success" shape="round" type="submit" class="ion-padding">Cadastrar</ion-button>
+          </div>
+          
+        </form>
+    </ion-col>
+  </ion-row>
+
 </ion-content>
 
 <app-footer></app-footer>
