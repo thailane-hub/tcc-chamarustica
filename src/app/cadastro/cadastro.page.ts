@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 import { AuthenticateService } from '../services/auth.service';
 
 @Component({
@@ -10,6 +10,7 @@ export class CadastroPage {
   password: string = '';
   confirmPassword: string = '';
   errorMessage: string = '';
+
  
 
   constructor(private _authenticate:AuthenticateService

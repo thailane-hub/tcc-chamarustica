@@ -30,6 +30,7 @@ export class AuthenticateService {
         createUserWithEmailAndPassword(this.auth, email, password,)
         .then(() => {
             this._message.show('Conta criada com sucesso! Realize o Login!!!');
+            this.redirectTo('/login');
         })
         .catch((_: any) => {
             this.showErro(_, email, password);
@@ -49,20 +50,22 @@ export class AuthenticateService {
     * */
     public async login(email: string, password: string): Promise<boolean>{
         this.isLoading = true;
-
         signInWithEmailAndPassword(this.auth, email, password)
         .then((response: any) => {
             console.log(response.user);
-            this._message.show('Login Realizado com Sucesso!');
+            this.redirectTo('/home');
+        
         })
         .catch((_: any) => {
             this.showErro(_, email, password);
+            
         })
         .finally(() => {
             this.isLoading = false;
         });
 
         return true;
+        
     }
 
     

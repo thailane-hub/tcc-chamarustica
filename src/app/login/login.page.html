@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true">
+<ion-row class="ion-justify-content-center">
+  <ion-col size="12" size-lg="6">
+    <form #loginForm="ngForm" (ngSubmit)="realizarLogin(loginForm.value)">
+      <ion-item>
+        <ion-label>Login</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+         label="Usuário" 
+         name="email"
+         type="text"
+         ngModel
+          ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+        label="senha"
+        name="password"
+        type="password"
+        ngModel
+        ></ion-input>
+      </ion-item >
+
+      <ion-item>
+        <ion-button  shape="round"color="success" type="submit" class="ion-padding"> Login </ion-button>
+      </ion-item>
+
+    </form>
+
+  </ion-col>
+</ion-row>
+</ion-content>
+<app-footer></app-footer>

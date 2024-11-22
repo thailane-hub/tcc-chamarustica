@@ -5,7 +5,6 @@
     <ion-row class="ion-justify-content-center">
       <ion-col size="12" size-lg="6"  class="ion-margin ion-padding">
         <form #criarContaForm="ngForm" (ngSubmit)="criarConta(criarContaForm.value)">
-
           <ion-item class="list">
             <ion-input
             type="text"
@@ -16,18 +15,6 @@
             ngModel
             required
             ></ion-input>
-            </ion-item>
-          
-            <ion-item>
-              <ion-input
-              type="text"
-              name="telefone"
-              fill="solid"
-              label="Telefone"
-              labelPlacement="floating"
-              ngModel
-              required
-              ></ion-input>
             </ion-item>
             
           <ion-item>
