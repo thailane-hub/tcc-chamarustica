@@ -4,31 +4,37 @@
 <ion-row class="ion-justify-content-center">
   <ion-col size="12" size-lg="6">
     <form #loginForm="ngForm" (ngSubmit)="realizarLogin(loginForm.value)">
+
+      <ion-col  class="item ion-padding" >
+        <ion-label >Login</ion-label>
+      </ion-col>
+
       <ion-item>
-        <ion-label>Login</ion-label>
+        <ion-input
+        type="text"
+        name="email"
+        fill="solid"
+        label="Usuário"
+        labelPlacement="floating"
+        ngModel
+        required
+        ></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-input
-         label="Usuário" 
-         name="email"
-         type="text"
-         ngModel
-          ></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-input
-        label="senha"
+        label="Senha"
         name="password"
         type="password"
+        fill="solid"
+        labelPlacement="floating"
         ngModel
         ></ion-input>
       </ion-item >
 
-      <ion-item>
+      <ion-col class="button">
         <ion-button  shape="round"color="success" type="submit" class="ion-padding"> Login </ion-button>
-      </ion-item>
+      </ion-col>
 
     </form>
 
