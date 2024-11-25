@@ -7,6 +7,7 @@ import { CheckoutPage } from './checkout.page';
 import { HeaderModule } from '../shared/components/header/header.module';
 import { FooterModule } from '../shared/components/footer/footer.module';
 import { BtnAdicionarModule } from '../shared/components/button/btn-adicionar/btn-adicionar.module';
+import { CarrinhoModule } from '../shared/components/carrinho/carrinho.module';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { BtnAdicionarModule } from '../shared/components/button/btn-adicionar/bt
     CheckoutPageRoutingModule,
     HeaderModule,
     FooterModule,
-    BtnAdicionarModule
+    BtnAdicionarModule,
+    CarrinhoModule
   ],
   declarations: [CheckoutPage]
 })
