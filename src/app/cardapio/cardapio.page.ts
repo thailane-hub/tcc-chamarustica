@@ -19,20 +19,34 @@ export class CardapioPage {
   ngOnInit() {
   }
 
+  sec: any = 2;
+
   favoritar(produto: any){
     console.log(produto)
-    this.produtoService.produtos.forEach(item=>{
+    this.produtoService.produtos.hamburguer.forEach(item=>{
       if(produto.id == item.id){
         item.favorito = !item.favorito
       }
     })
-
-    console.log(this.produtoService.produtos);
-
+    this.produtoService.produtos.bebida.forEach(item=>{
+      if(produto.id == item.id){
+        item.favorito = !item.favorito
+    }
+    })
+    this.produtoService.produtos.outro.forEach(item=>{
+      if(produto.id == item.id){
+        item.favorito = !item.favorito
+    }
+    })
   }
 
   addProduto(produto: any) {
     this.carrinhoService.addProduto(produto);
+  }
+
+  secao(n: any){    
+    this.sec = null;
+    this.sec = n;
   }
 
 }

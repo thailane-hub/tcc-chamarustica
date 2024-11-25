@@ -20,7 +20,23 @@ export class FavoritoPage implements OnInit {
   }
 
  remover(produto:any){
-  this.produtoService.produtos.forEach(
+  this.produtoService.produtos.hamburguer.forEach(
+    item=>{
+      if(item.id==produto.id){
+        item.favorito = false;
+      }
+    }
+  )
+
+  this.produtoService.produtos.bebida.forEach(
+    item=>{
+      if(item.id==produto.id){
+        item.favorito = false;
+      }
+    }
+  )
+
+  this.produtoService.produtos.outro.forEach(
     item=>{
       if(item.id==produto.id){
         item.favorito = false;
