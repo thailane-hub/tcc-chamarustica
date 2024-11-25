@@ -1,5 +1,4 @@
 .botao{
-    margin-top: 80px;
     margin-right: 200px;
     gap: 20px;
     display: flex;
@@ -7,9 +6,14 @@
 
 .display{
     display: flex;
+    margin-left: 20px;
 }
 
 .revisao h1{
     font-family: "Bahianita", sans-serif;
     font-size: 3rem;
+}
+
+.padding{
+    margin-top: 80px;
 }
