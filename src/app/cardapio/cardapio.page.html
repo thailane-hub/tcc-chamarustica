@@ -1,94 +1,107 @@
 <ion-content [fullscreen]="true">
   <app-header></app-header>
-  <app-banner-rustico texto="HAMBÚRGUERS"></app-banner-rustico>  
+  <app-banner-rustico texto="CARDÁPIO"></app-banner-rustico>
+
   <ion-row>
     <ion-col>
       <div class="text">
-        <ion-label color="primary"><h1 class="text-h1">Bebidas</h1></ion-label>
-        <ion-label color="primary"><h1 class="text-h1">Hambúrguer</h1></ion-label>
-        <ion-label color="primary"><h1 class="text-h1">Porções</h1></ion-label>
+        <ion-label color="primary" (click)="secao(1)"><h1 class="text-h1" id="bebidas">Bebidas</h1></ion-label>
+        <ion-label color="primary" (click)="secao(2)"><h1 class="text-h1" id="hamburguers">Hambúrguers</h1></ion-label>
+        <ion-label color="primary" (click)="secao(3)"><h1 class="text-h1" id="outros">Outros</h1></ion-label>
       </div>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ng-container *ngFor="let produto of this.produtoService.produtos">
+
+
+  <ion-row *ngIf="this.sec === 2">
+    <ng-container *ngFor="let produto of this.produtoService.produtos.hamburguer">
      <ion-col size="12" sizelg="4" size-md="4" class="card-container">
       <ion-card>
             <ng-container *ngIf="produto.favorito">
-           <img src="https://cdn1.iconfinder.com/data/icons/macster/70/.svg-17-512.png" class="icon-img" (click)="favoritar(produto)">
+           <img src="/assets/icon/star.png" class="icon-img" (click)="favoritar(produto)">
          </ng-container>
          <ng-container *ngIf="!produto.favorito">
-           <img src="https://img.icons8.com/?size=48&id=19295&format=png" class="icon-img"  (click)="favoritar(produto)">
+           <img src="/assets/icon/starOff.png" class="icon-img"  (click)="favoritar(produto)">
          </ng-container>
           <img class="card-img" alt="" src="{{produto.imagem}}" />
           <ion-card-header>
+
             <ion-card-title color="primary" class="card-titulo">{{produto.nome}}</ion-card-title>
             <ion-card-subtitle color="warning" class="card-preco">R${{produto.preco}}</ion-card-subtitle>
+
           </ion-card-header>
           
           <ion-card-content class="card-descricao">
-            <ion-label color="primary">{{produto.descricao}}</ion-label>
+            {{produto.descricao}}
           </ion-card-content>
           <app-btn-adicionar texto="Adicionar"  (click)="addProduto(produto)"></app-btn-adicionar>
         </ion-card>
         </ion-col>
 
-        
     </ng-container>
-
   </ion-row>
+
+
+  <ion-row *ngIf="this.sec === 1">
+    
+    <ng-container *ngFor="let produto of this.produtoService.produtos.bebida">
+      <ion-col size="12" sizelg="4" size-md="4" class="card-container">
+       <ion-card>
+             <ng-container *ngIf="produto.favorito">
+            <img src="/assets/icon/star.png" class="icon-img" (click)="favoritar(produto)">
+          </ng-container>
+          <ng-container *ngIf="!produto.favorito">
+            <img src="/assets/icon/starOff.png" class="icon-img"  (click)="favoritar(produto)">
+          </ng-container>
+           <img class="card-img" alt="" src="{{produto.imagem}}" />
+           <ion-card-header>
+ 
+             <ion-card-title color="primary" class="card-titulo">{{produto.nome}}</ion-card-title>
+             <ion-card-subtitle color="warning" class="card-preco">R${{produto.preco}}</ion-card-subtitle>
+ 
+           </ion-card-header>
+           
+           <ion-card-content class="card-descricao">
+             {{produto.descricao}}
+           </ion-card-content>
+           <app-btn-adicionar texto="Adicionar"  (click)="addProduto(produto)"></app-btn-adicionar>
+         </ion-card>
+         </ion-col>
+ 
+     </ng-container>
+  </ion-row>
+
+
+  <ion-row *ngIf="this.sec === 3">
+    
+    <ng-container *ngFor="let produto of this.produtoService.produtos.outro">
+      <ion-col size="12" sizelg="4" size-md="4" class="card-container">
+       <ion-card>
+             <ng-container *ngIf="produto.favorito">
+            <img src="/assets/icon/star.png" class="icon-img" (click)="favoritar(produto)">
+          </ng-container>
+          <ng-container *ngIf="!produto.favorito">
+            <img src="/assets/icon/starOff.png" class="icon-img"  (click)="favoritar(produto)">
+          </ng-container>
+           <img class="card-img" alt="" src="{{produto.imagem}}" />
+           <ion-card-header>
+ 
+             <ion-card-title color="primary" class="card-titulo">{{produto.nome}}</ion-card-title>
+             <ion-card-subtitle color="warning" class="card-preco">R${{produto.preco}}</ion-card-subtitle>
+ 
+           </ion-card-header>
+           
+           <ion-card-content class="card-descricao">
+             {{produto.descricao}}
+           </ion-card-content>
+           <app-btn-adicionar texto="Adicionar"  (click)="addProduto(produto)"></app-btn-adicionar>
+         </ion-card>
+         </ion-col>
+ 
+     </ng-container>
+  </ion-row>
+  
   <app-footer></app-footer>
-  <div class="carrinho">
-    <ion-row>
-      <ion-col size="12">
-        <ion-card>
-          <ion-card-content>
-            <ion-list class="list ion-no-padding">
-              <ng-container *ngFor="let produto of carrinhoService.getcarrinhoItens()">
-                <ion-item class="ion-no-padding">
-
-                  <ion-row>
-                    <ion-col size="5" >
-                      <ion-thumbnail>
-                        <img alt="Silhouette of mountains" src="{{produto.imagem}}" />
-                      </ion-thumbnail>
-                    </ion-col>
-                    
-                    <ion-col class="carrinho-text" size="7">
-                      <ion-card-subtitle class="carrinho-titulo">{{produto.nome}}</ion-card-subtitle>
-                      <ion-label class="carrinho-preco">R$: {{produto.preco}}</ion-label>
-                    </ion-col>
-
-                    <ion-col size="12" class="incrementer">
-                      <ng-container *ngIf="produto.quantidade==1">
-                        <ion-icon name="trash-bin-outline"(click)="deletar(produto)"></ion-icon>
-                      </ng-container>
-                      <ng-container *ngIf="produto.quantidade>1">
-                        <ion-icon name="remove-outline" (click)="decrementer(produto)"></ion-icon>
-                      </ng-container>
-                      <ion-label>{{produto.quantidade}}</ion-label>
-                      <ion-icon name="add-outline" (click)="incrementer(produto)"></ion-icon>
-                    </ion-col>
-
-                    <ion-col size="12">
-                      <ion-label>R$: {{ produto.subtotal }}</ion-label>
-                      
-                    </ion-col>
-                  </ion-row>
-
-                </ion-item>
-              </ng-container>
-              <ion-item size="12">
-                <ion-label>{{ this.carrinhoService.total }}</ion-label>
-              </ion-item>
-        
-            </ion-list>
-          </ion-card-content>
-        </ion-card>
-   
-      </ion-col>
-    </ion-row>
-
-  </div>
+  <app-carrinho></app-carrinho>
 </ion-content>
 

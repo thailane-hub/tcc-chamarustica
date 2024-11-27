@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProdutoService } from '../services/produto.service';
+import { CarrinhoService } from '../services/carrinho.service';
 
 @Component({
   selector: 'app-favorito',
@@ -8,9 +9,9 @@ import { ProdutoService } from '../services/produto.service';
 })
 export class FavoritoPage implements OnInit {
 
-
   constructor(
-    public produtoService:ProdutoService
+    public produtoService:ProdutoService,
+    public carrinhoService:CarrinhoService
   ) {
     console.log(this.produtoService.produtos);
   }
@@ -19,7 +20,23 @@ export class FavoritoPage implements OnInit {
   }
 
  remover(produto:any){
-  this.produtoService.produtos.forEach(
+  this.produtoService.produtos.hamburguer.forEach(
+    item=>{
+      if(item.id==produto.id){
+        item.favorito = false;
+      }
+    }
+  )
+
+  this.produtoService.produtos.bebida.forEach(
+    item=>{
+      if(item.id==produto.id){
+        item.favorito = false;
+      }
+    }
+  )
+
+  this.produtoService.produtos.outro.forEach(
     item=>{
       if(item.id==produto.id){
         item.favorito = false;
@@ -27,5 +44,9 @@ export class FavoritoPage implements OnInit {
     }
   )
  }
+
+ addProduto(produto: any) {
+  this.carrinhoService.addProduto(produto);
+}
 
 }

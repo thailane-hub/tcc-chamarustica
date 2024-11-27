@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProdutoService } from '../services/produto.service';
@@ -8,9 +9,8 @@ import { CarrinhoService } from '../services/carrinho.service';
   templateUrl: './cardapio.page.html',
   styleUrls: ['./cardapio.page.scss'],
 })
+
 export class CardapioPage {
-
-
 
   constructor(
     public produtoService:ProdutoService,
@@ -20,35 +20,34 @@ export class CardapioPage {
   ngOnInit() {
   }
 
+  sec: any = 2;
+
   favoritar(produto: any){
     console.log(produto)
-    this.produtoService.produtos.forEach(item=>{
+    this.produtoService.produtos.hamburguer.forEach(item=>{
       if(produto.id == item.id){
         item.favorito = !item.favorito
       }
     })
-
-    console.log(this.produtoService.produtos);
-
+    this.produtoService.produtos.bebida.forEach(item=>{
+      if(produto.id == item.id){
+        item.favorito = !item.favorito
+    }
+    })
+    this.produtoService.produtos.outro.forEach(item=>{
+      if(produto.id == item.id){
+        item.favorito = !item.favorito
+    }
+    })
   }
 
   addProduto(produto: any) {
     this.carrinhoService.addProduto(produto);
   }
 
-  incrementer(produto:any){
-    this.carrinhoService.incrementer(produto)
-  }
-
-  
-  decrementer(produto:any){
-    this.carrinhoService.decrementer(produto)
-  }
-
-  deletar(produto: any) {
-    this.carrinhoService.deletar(produto)
+  secao(n: any){    
+    this.sec = null;
+    this.sec = n;
   }
 
 }
-
-
