@@ -9,8 +9,6 @@ import { ProdutoService } from '../services/produto.service';
 })
 export class CadastroprodutoadmPage implements OnInit {
 
-  produtos = this.produtoService.teste();
-
   novosprodutos:any = [];
 
   constructor( public crudService: CrudService,
@@ -24,7 +22,7 @@ export class CadastroprodutoadmPage implements OnInit {
   
     salvar() {
       console.log(this.produtoService.produtos);
-      this.crudService.insert(this.produtoService.teste(), 'produto');
+      this.crudService.insert(this.produtoService.produtos, 'produto');
       this.getProdutos();
     }
 
