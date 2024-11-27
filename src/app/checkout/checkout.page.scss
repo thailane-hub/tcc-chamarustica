@@ -1,24 +1,22 @@
-.botao{
-    margin-right: 200px;
-    gap: 20px;
-    display: flex;
-}
+// .botao{
+//     margin-right: 200px;
+//     gap: 20px;
+//     display: flex;
+// }
 
-.display{
-    display: flex;
-    margin-left: 20px;
-}
-
-.revisao{
+.fonte{
     font-family: "Bahianita", sans-serif;
     font-size: 3rem;
 }
 
-#endereco{
-    margin-top: 50px;
-    margin-left: 400px;
-}
-
 #espacamento{
     padding: 15px;
+}
+
+.espacoWords{
+    word-spacing: 50px;
+}
+
+.ajusteTudo{
+    margin-left: 3rem;
 }
