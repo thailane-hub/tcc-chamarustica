@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProdutoService } from '../services/produto.service';
@@ -50,3 +51,5 @@ export class CardapioPage {
   }
 
 }
+
+
