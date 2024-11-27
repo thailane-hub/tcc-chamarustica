@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'cadastroprodutoadm',
+    loadChildren: () => import('./cadastroprodutoadm/cadastroprodutoadm.module').then( m => m.CadastroprodutoadmPageModule)
   }
 ];
 

@@ -1,0 +1,81 @@
+
+<ion-content [fullscreen]="true">
+ <!-- FORM DE CADASTRO -->
+ <ion-row class="ion-justify-content-center">
+  <ion-col size="10" size-lg="8" class="ion-text-center">
+    <ion-label>
+      <h1>CADASTRAR PRODUTO</h1>
+    </ion-label>
+    <ion-item>
+      <ion-input label="" type="file" [(ngModel)]="this.produtoService.produtos.imagem"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-input label="Titulo do produto:" [(ngModel)]="this.produtoService.produtos.nome"></ion-input>
+    </ion-item> -->
+    <ion-item>
+      <ion-input label="Preço do produto:" [(ngModel)]="this.produtoService.produtos.preco"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Descrição do produto" [(ngModel)]="this.produtoService.produtos.descricao"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button slot="end" color="tertiary" (click)="salvar()">Salvar</ion-button>
+    </ion-item>
+  </ion-col>
+</ion-row>
+
+<!-- LISTAGEM DE ITENS  -->
+<ion-row class="ion-justify-content-center">
+  <ion-col size="10" size-lg="8">
+    <ion-card>
+      <ng-container *ngFor="let novoproduto of this.novosprodutos">
+        <ng-container *ngIf="this.crudService.isLoading">
+          <ion-row>
+            <ion-col>
+              <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+            </ion-col>
+            <ion-col>
+              <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+            </ion-col>
+            <ion-col>
+              <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+            </ion-col>
+            <ion-col>
+              <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+            </ion-col>
+            <ion-col>
+              <ion-skeleton-text [animated]="true" style="width: 80px"></ion-skeleton-text>
+            </ion-col>
+            <ion-col>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="pencil-outline"></ion-icon>
+                <ion-icon slot="end" name="trash-outline" (click)="remover(novoproduto.id)"></ion-icon>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ng-container>
+        <ng-container *ngIf="!this.crudService.isLoading">
+          <ion-row>
+            <ion-col><img class="card-img" alt="" src="{{novoproduto.imagem}}" /></ion-col>
+            <ion-col>Nome: {{ novoproduto.nome }}</ion-col>
+            <ion-col>preco: {{ novoproduto.preco }}</ion-col>
+            <ion-col>Descrição: {{ novoproduto.descricao}}</ion-col>
+            
+            <ion-col>
+              <ion-item lines="none">
+                <ion-icon slot="end" name="pencil-outline"></ion-icon>
+                <ion-icon slot="end" name="trash-outline" (click)="remover(novoproduto.id)"></ion-icon>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ng-container>
+      </ng-container>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+</ion-content>
+
+
