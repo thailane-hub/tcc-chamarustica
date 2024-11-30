@@ -4,20 +4,35 @@
  <ion-row class="ion-justify-content-center">
   <ion-col size="10" size-lg="8" class="ion-text-center">
     <ion-label>
-      <h1>CADASTRAR HAMBURGUER</h1>
+      <h1>CADASTRAR PRODUTO</h1>
     </ion-label>
-    <ion-item>
+    <!-- <ion-item>
       <ion-input label="" type="file" [(ngModel)]="this.produtoService.produtos.imagem"></ion-input>
+    </ion-item> -->
+
+    <ion-item>
+      <ion-input label="Nome do Produto:" [(ngModel)]="this.produtoService.produto.nome"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input label="Descrição:" [(ngModel)]="this.produtoService.produto.descricao"></ion-input>
     </ion-item>
 
-    <!-- <ion-item>
-      <ion-input label="Titulo do produto:" [(ngModel)]="this.produtoService.produtos.nome"></ion-input>
-    </ion-item> -->
     <ion-item>
-      <ion-input label="Preço do produto:" [(ngModel)]="this.produtoService.produtos."></ion-input>
+      <ion-input label="Preço:" [(ngModel)]="this.produtoService.produto.preco"></ion-input>
     </ion-item>
+
     <ion-item>
-      <ion-input label="Descrição do produto" [(ngModel)]="this.produtoService.produtos.descricao"></ion-input>
+      <ion-input label="Ativo:" [(ngModel)]="this.produtoService.produto.ativo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-button (click)="setOpen(true)">Add Categoria</ion-button>
+      <ion-select label="Categoria" placeholder="Categoria" (ionChange)="setCategoria($event)">
+        <ng-container *ngFor="let categoria of this.categoriaService.categorias">
+          <ion-select-option value="{{ categoria.nome }}">{{ categoria.nome }}</ion-select-option>
+        </ng-container>
+      </ion-select>
     </ion-item>
 
     <ion-item lines="none">
@@ -30,7 +45,7 @@
 <ion-row class="ion-justify-content-center">
   <ion-col size="10" size-lg="8">
     <ion-card>
-      <ng-container *ngFor="let novoproduto of this.novosprodutos">
+      <ng-container *ngFor="let produto of this.produtoService.produtos">
         <ng-container *ngIf="this.crudService.isLoading">
           <ion-row>
             <ion-col>
@@ -51,22 +66,22 @@
             <ion-col>
               <ion-item lines="none">
                 <ion-icon slot="end" name="pencil-outline"></ion-icon>
-                <ion-icon slot="end" name="trash-outline" (click)="remover(novoproduto.id)"></ion-icon>
+                <ion-icon slot="end" name="trash-outline" (click)="remover(produto.id)"></ion-icon>
               </ion-item>
             </ion-col>
           </ion-row>
         </ng-container>
         <ng-container *ngIf="!this.crudService.isLoading">
           <ion-row>
-            <ion-col><img class="card-img" alt="" src="{{novoproduto.imagem}}" /></ion-col>
-            <ion-col>Nome: {{ novoproduto.nome }}</ion-col>
-            <ion-col>preco: {{ novoproduto.preco }}</ion-col>
-            <ion-col>Descrição: {{ novoproduto.descricao}}</ion-col>
+            <ion-col><img class="card-img" alt="" src="{{produto.imagem}}" /></ion-col>
+            <ion-col>Nome: {{ produto.nome }}</ion-col>
+            <ion-col>preco: {{ produto.preco }}</ion-col>
+            <ion-col>Descrição: {{ produto.descricao}}</ion-col>
             
             <ion-col>
               <ion-item lines="none">
-                <ion-icon slot="end" name="pencil-outline"></ion-icon>
-                <ion-icon slot="end" name="trash-outline" (click)="remover(novoproduto.id)"></ion-icon>
+                <ion-icon slot="end" name="pencil-outline" (click)="atualizar(produto)"></ion-icon>
+                <ion-icon slot="end" name="trash-outline" (click)="remover(produto.id)"></ion-icon>
               </ion-item>
             </ion-col>
           </ion-row>
@@ -75,6 +90,24 @@
     </ion-card>
   </ion-col>
 </ion-row>
+
+
+<ion-modal [isOpen]="isModalOpen" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpen(false)">Close</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+        <ion-input label="nome" [(ngModel)]="this.categoriaService.categoria.nome"></ion-input>
+        <ion-button (click)="salvarCategoria()"></ion-button>
+    </ion-content>
+  </ng-template>
+</ion-modal>
 
 </ion-content>
 

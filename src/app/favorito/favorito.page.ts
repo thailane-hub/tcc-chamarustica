@@ -9,6 +9,8 @@ import { CarrinhoService } from '../services/carrinho.service';
 })
 export class FavoritoPage implements OnInit {
 
+  favoritos: any = [];
+
   constructor(
     public produtoService:ProdutoService,
     public carrinhoService:CarrinhoService
@@ -19,34 +21,36 @@ export class FavoritoPage implements OnInit {
   ngOnInit() {
   }
 
- remover(produto:any){
-  this.produtoService.produtos.hamburguer.forEach(
-    item=>{
-      if(item.id==produto.id){
-        item.favorito = false;
-      }
-    }
-  )
+  remover(produto: any){}
 
-  this.produtoService.produtos.bebida.forEach(
-    item=>{
-      if(item.id==produto.id){
-        item.favorito = false;
-      }
-    }
-  )
+//  remover(produto:any){
+  // this.produtoService.produtos.hamburguer.forEach(
+  //   item=>{
+  //     if(item.id==produto.id){
+  //       item.favorito = false;
+  //     }
+  //   }
+  // )
 
-  this.produtoService.produtos.outro.forEach(
-    item=>{
-      if(item.id==produto.id){
-        item.favorito = false;
-      }
-    }
-  )
- }
+//   this.produtoService.produtos.bebida.forEach(
+//     item=>{
+//       if(item.id==produto.id){
+//         item.favorito = false;
+//       }
+//     }
+//   )
 
- addProduto(produto: any) {
-  this.carrinhoService.addProduto(produto);
-}
+//   this.produtoService.produtos.outro.forEach(
+//     item=>{
+//       if(item.id==produto.id){
+//         item.favorito = false;
+//       }
+//     }
+//   )
+//  }
+
+  addProdutoCarrinho(produto: any) {
+    this.carrinhoService.addProduto(produto);
+  }
 
 }
