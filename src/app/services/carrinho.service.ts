@@ -8,6 +8,8 @@ export class CarrinhoService {
 
   public carrinho: any[] = [];
 
+  valores = [{quantidade:1, subtotal:0}]
+
   constructor() {
     this.atualizarSubtotal()
   }

@@ -4,7 +4,7 @@
   
   <ion-row>
   <ng-container *ngFor="let produto of this.produtoService.produtos">
-    <!-- <ng-container *ngIf="produto.favorito"> -->
+    <ng-container *ngIf="produto.favorito">
       <ion-col size="4" sizelg="3" class="card-container" >
         <ion-card  size="12" sizelg="20" > 
           <img src="https://cdn1.iconfinder.com/data/icons/macster/70/.svg-17-512.png" class="icon-img" (click)="remover(produto)">
@@ -20,7 +20,7 @@
               <app-btn-adicionar texto="Adicionar"  (click)="addProdutoCarrinho(produto)"></app-btn-adicionar>
             </ion-card>
           </ion-col>
-        <!-- </ng-container> -->
+        </ng-container>
       </ng-container>
       
     </ion-row>

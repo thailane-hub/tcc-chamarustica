@@ -9,18 +9,36 @@
     width: 450px;
     height: 450px;
 }
+ .texto{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+
+ }
+ 
+p {
+    margin: 0; 
+  }
+
+ .texto span {
+    font-weight: bold; 
+  }
 
 .msg-boas{
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     margin-left: 100px;
     margin-top: 120px;
     margin-bottom: 120px;
-    margin-right: 250px;
+    margin-right: 230px;
 }
 
 .msg-boas p{
-    position: absolute;
     top: 180px;
     left: 100px;
     text-align: center;
@@ -29,9 +47,8 @@
 }
 
 .msg-boas span{
-    font-size: 80px;
+    font-size: 4rem;
     font-family: "Bahianita", sans-serif;
-    // box-shadow: 1px 1px black;
 }
 
 .entrar-botoes{
@@ -42,6 +59,7 @@
     display: inline-block;
     position: relative;
     margin-left: 100px;
+    cursor: pointer;
 }
 
 .entr span{
@@ -57,6 +75,7 @@
     display: inline-block;
     position: relative;
     margin-left: 100px;
+    cursor: pointer;
 }
 
 .cad span{
@@ -79,4 +98,5 @@
 .btao{
     width: 380px;
     height: 75px;
+  
 }

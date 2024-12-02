@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ProdutoService } from '../services/produto.service';
 import { CarrinhoService } from '../services/carrinho.service';
 import { CrudService } from '../services/crud.service';
+import { CategoriaService } from '../services/categoria.service';
 
 @Component({
   selector: 'app-cardapio',
@@ -17,6 +18,7 @@ export class CardapioPage {
     public produtoService:ProdutoService,
     public carrinhoService:CarrinhoService,
     public crudService: CrudService,
+    public categoriaservice:CategoriaService
   ) { 
     this.getProdutos();
   }
@@ -27,12 +29,12 @@ export class CardapioPage {
   sec: any = 2;
 
   favoritar(produto: any){
-    // console.log(produto)
-    // this.produtoService.produtos.forEach(item=>{
-    //   if(produto.id == item.id){
-    //     item.favorito = !item.favorito
-    //   }
-    // })
+    console.log(produto)
+    this.produtoService.produtos.forEach(item=>{
+      if(produto.id == item.id){
+        item.favorito = !item.favorito
+      }
+    })
    
   }
 

@@ -21,33 +21,16 @@ export class FavoritoPage implements OnInit {
   ngOnInit() {
   }
 
-  remover(produto: any){}
 
-//  remover(produto:any){
-  // this.produtoService.produtos.hamburguer.forEach(
-  //   item=>{
-  //     if(item.id==produto.id){
-  //       item.favorito = false;
-  //     }
-  //   }
-  // )
-
-//   this.produtoService.produtos.bebida.forEach(
-//     item=>{
-//       if(item.id==produto.id){
-//         item.favorito = false;
-//       }
-//     }
-//   )
-
-//   this.produtoService.produtos.outro.forEach(
-//     item=>{
-//       if(item.id==produto.id){
-//         item.favorito = false;
-//       }
-//     }
-//   )
-//  }
+ remover(produto:any){
+  this.produtoService.produtos.forEach(
+    item=>{
+      if(item.id==produto.id){
+        item.favorito = false;
+      }
+    }
+  )
+ }
 
   addProdutoCarrinho(produto: any) {
     this.carrinhoService.addProduto(produto);

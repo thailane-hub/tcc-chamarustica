@@ -1,5 +1,28 @@
+<ion-header>
+  <ion-row>
+      <ion-col size="6" size-lg="auto">
+          <ion-item>
+              <ion-thumbnail>
+                  <img alt="Chama Rustica" src="../../assets/img/logo.png"/>
+              </ion-thumbnail>
+          </ion-item>
+      </ion-col>
+  </ion-row>
+</ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="10" size-lg="8" class="ion-text-center">
+      <ion-item>
+        <ion-button color="success" shape="round" size="default" (click)="setOpen(true)"> Criar Categoria</ion-button>
+        <ion-select label="Categoria" placeholder="Categoria" (ionChange)="setCategoria($event)">
+          <ng-container *ngFor="let categoria of this.categoriaService.categorias">
+            <ion-select-option value="{{ categoria.nome }}">{{ categoria.nome }}</ion-select-option>
+          </ng-container>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
  <!-- FORM DE CADASTRO -->
  <ion-row class="ion-justify-content-center">
   <ion-col size="10" size-lg="8" class="ion-text-center">
@@ -23,20 +46,11 @@
     </ion-item>
 
     <ion-item>
-      <ion-input label="Ativo:" [(ngModel)]="this.produtoService.produto.ativo"></ion-input>
+      <ion-toggle [checked]="true" aria-label="Enable Notifications"[(ngModel)]="this.produtoService.produto.ativo">Dísponivel:</ion-toggle>
+  
     </ion-item>
-
-    <ion-item>
-      <ion-button (click)="setOpen(true)">Add Categoria</ion-button>
-      <ion-select label="Categoria" placeholder="Categoria" (ionChange)="setCategoria($event)">
-        <ng-container *ngFor="let categoria of this.categoriaService.categorias">
-          <ion-select-option value="{{ categoria.nome }}">{{ categoria.nome }}</ion-select-option>
-        </ng-container>
-      </ion-select>
-    </ion-item>
-
     <ion-item lines="none">
-      <ion-button slot="end" color="tertiary" (click)="salvar()">Salvar</ion-button>
+      <ion-button slot="end" color="success" shape="round" size="default" (click)="salvar()">Salvar</ion-button>
     </ion-item>
   </ion-col>
 </ion-row>
@@ -91,20 +105,19 @@
   </ion-col>
 </ion-row>
 
-
-<ion-modal [isOpen]="isModalOpen" (willDismiss)="onWillDismiss($event)">
+<ion-modal color="success" [isOpen]="isModalOpen" (willDismiss)="onWillDismiss($event)">
   <ng-template>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Modal</ion-title>
+        <ion-title color="success">Criar Categoria</ion-title>
         <ion-buttons slot="end">
-          <ion-button (click)="setOpen(false)">Close</ion-button>
+          <ion-button color="success"(click)="setOpen(false)">Sair</ion-button>
         </ion-buttons>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
         <ion-input label="nome" [(ngModel)]="this.categoriaService.categoria.nome"></ion-input>
-        <ion-button (click)="salvarCategoria()"></ion-button>
+        <ion-button class="ion-padding" color="success" shape="round" size="default" (click)="salvarCategoria()">Salvar</ion-button>
     </ion-content>
   </ng-template>
 </ion-modal>
