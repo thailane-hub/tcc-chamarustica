@@ -2,6 +2,8 @@ import { MessageService } from './message.service';
 import { Injectable } from '@angular/core';
 import { Auth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { UserService } from './user.service';
+import { CrudService } from './crud.service';
 
 @Injectable({
     providedIn: 'root',
@@ -16,6 +18,8 @@ export class AuthenticateService {
         public auth: Auth,
         private _message: MessageService,
         private _router: Router,
+        private userService: UserService,
+        public crudService: CrudService
     ) { }
     
     /*
@@ -28,8 +32,11 @@ export class AuthenticateService {
         this.isLoading = true;
 
         createUserWithEmailAndPassword(this.auth, email, password)
-        .then(() => {
+        .then((response) => {
+            console.log(response.user);
             this._message.show('Conta criada com sucesso! Realize o Login!!!');
+            this.userService.usuario.uid = response.user.uid
+            this.crudService.insert(this.userService.usuario, 'usuarios')
 
             this.redirectTo('/login');
         })
@@ -53,7 +60,18 @@ export class AuthenticateService {
         this.isLoading = true;
         signInWithEmailAndPassword(this.auth, email, password)
         .then((response: any) => {
-            console.log(response.user);
+            
+            
+            this.crudService.fetchByOperatorParam("uid", "==", response.user.uid, "usuarios")
+            .then(data => {
+                console.log(data[0].nome);
+                this.userService.usuario.nome = data[0].nome
+                this.userService.usuario.email = data[0].email
+                this.userService.usuario.uid = response.user.uid
+                
+                localStorage.setItem("usuario", JSON.stringify(this.userService.usuario))
+            })
+            
             this.redirectTo('/home');
         
         })
@@ -84,6 +102,7 @@ export class AuthenticateService {
     * @param email: string
     */
     showErro(_: any, email: string, password: string){
+        if (_.code == 'auth/invalid-login-credentials') this.message = 'Usuario não encontrado.';
         if (_.code == 'auth/too-many-requests') this.message = 'Você realizou muitas tentativas de login. Tente novamente mais tarde.';
         if (_.code == 'auth/user-not-found') this.message = 'Usuário não encontrado.';
         if (_.code == 'auth/wrong-password') this.message = 'Senha incorreta.';

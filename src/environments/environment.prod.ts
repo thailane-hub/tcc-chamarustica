@@ -1,12 +1,12 @@
 export const environment = {
   firebaseConfig: {
-    apiKey: "AIzaSyCvoHf0_dXYYSIa5anmvzIXxmaHAb72XeA",
-  authDomain: "chamarustica-cd6db.firebaseapp.com",
-  projectId: "chamarustica-cd6db",
-  storageBucket: "chamarustica-cd6db.firebasestorage.app",
-  messagingSenderId: "142007169616",
-  appId: "1:142007169616:web:9f0bed9ccbaac454b49755",
-  measurementId: "G-Q33J25ZJG1"
+    apiKey: "AIzaSyBBjL30UkxuHbay4Yttrg218peeUlpZmHI",
+    authDomain: "chamarustica-2a6d7.firebaseapp.com",
+    projectId: "chamarustica-2a6d7",
+    storageBucket: "chamarustica-2a6d7.firebasestorage.app",
+    messagingSenderId: "351882415145",
+    appId: "1:351882415145:web:ce06f39dbd6317129de038",
+    measurementId: "G-Y55LPQS2VW"
   },
   production: true
 };

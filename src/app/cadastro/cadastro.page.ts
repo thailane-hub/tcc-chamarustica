@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import { AuthenticateService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -13,7 +14,9 @@ export class CadastroPage {
 
  
 
-  constructor(private _authenticate:AuthenticateService
+  constructor(
+    private _authenticate:AuthenticateService,
+    public userService: UserService
   ) { }
 
   validarSenha() {

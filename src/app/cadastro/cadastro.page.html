@@ -13,6 +13,8 @@
               name="nome"
               ngModel
               required
+              [(ngModel)]="this.userService.usuario.nome"
+              
               ></ion-input>
           </ion-item>
 
@@ -25,6 +27,7 @@
             labelPlacement="floating"
             ngModel
             required
+            [(ngModel)]="this.userService.usuario.email"
             ></ion-input>
             </ion-item>
             
