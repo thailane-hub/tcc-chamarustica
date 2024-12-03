@@ -15,15 +15,18 @@
     flex-direction: column;
     text-align: center;
     justify-content: center;
-
+    color:var(--branco);
  }
  
 p {
     margin: 0; 
+
   }
 
  .texto span {
     font-weight: bold; 
+  
+
   }
 
 .msg-boas{
@@ -69,6 +72,7 @@ p {
     text-align: center;
     font-size: 70px;
     font-family: "Bahianita", sans-serif;
+    color:var(--branco);
 }
 
 .cad{
@@ -85,6 +89,7 @@ p {
     text-align: center;
     font-size: 70px;
     font-family: "Bahianita", sans-serif;
+    color:var(--branco);
 }
 
 .entrar-ou{

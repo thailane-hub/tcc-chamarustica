@@ -27,9 +27,10 @@ export class AuthenticateService {
     public async register(email: string, password: string): Promise<boolean> {
         this.isLoading = true;
 
-        createUserWithEmailAndPassword(this.auth, email, password,)
+        createUserWithEmailAndPassword(this.auth, email, password)
         .then(() => {
             this._message.show('Conta criada com sucesso! Realize o Login!!!');
+
             this.redirectTo('/login');
         })
         .catch((_: any) => {
