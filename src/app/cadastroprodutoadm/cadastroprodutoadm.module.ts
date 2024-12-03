@@ -7,13 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { CadastroprodutoadmPageRoutingModule } from './cadastroprodutoadm-routing.module';
 
 import { CadastroprodutoadmPage } from './cadastroprodutoadm.page';
+import { InputimgComponent } from '../shared/components/inputimg/inputimg.component';
+import { InputimgModule } from '../shared/components/inputimg/inputimg.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CadastroprodutoadmPageRoutingModule
+    CadastroprodutoadmPageRoutingModule,
+    InputimgModule
   ],
   declarations: [CadastroprodutoadmPage]
 })

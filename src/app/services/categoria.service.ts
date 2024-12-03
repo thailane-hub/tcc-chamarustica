@@ -10,7 +10,7 @@ export class CategoriaService {
   }
 
   categorias: any = [
-    // {nome: null}
+    {nome: "Lanche"}, {nome: "Bebida"}, {nome: "Outro"}
   ]
 
   constructor() { }

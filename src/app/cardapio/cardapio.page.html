@@ -2,19 +2,21 @@
   <app-header></app-header>
   <app-banner-rustico texto="CARDÁPIO"></app-banner-rustico>
 
-  <!-- <ion-row>
-    <ng-container *ngFor="let categorias of this.categoriaService.categoria">
+  <ion-row>
+
       <ion-col>
         <div class="text">
-          <ion-label color="primary" (click)="secao(1)"><h1 class="text-h1" id="bebidas">{{categorias.nome}}</h1></ion-label>
+          <ion-label color="primary" (click)="filterItemsByCategoria('Bebida')"><h1 class="text-h1" id="bebidas">Bebida</h1></ion-label>
+          <ion-label color="primary" (click)="filterItemsByCategoria('Lanche')"><h1 class="text-h1" id="hamburguer">Lanche</h1></ion-label>
+          <ion-label color="primary" (click)="filterItemsByCategoria('Outro')"><h1 class="text-h1" id="Outros">Outros</h1></ion-label>
         </div>
       </ion-col>
-    </ng-container>
-  </ion-row> -->
+
+  </ion-row>
 
 
   <ion-row>
-    <ng-container *ngFor="let produto of this.produtoService.produtos">
+    <ng-container *ngFor="let produto of this.filteredItems">
      <ion-col size="12" sizelg="4" size-md="4" class="card-container">
       <ion-card>
           <ng-container *ngIf="produto.favorito">

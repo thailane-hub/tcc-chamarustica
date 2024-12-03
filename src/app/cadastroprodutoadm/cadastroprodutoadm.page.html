@@ -14,7 +14,6 @@
   <ion-row class="ion-justify-content-center">
     <ion-col size="10" size-lg="8" class="ion-text-center">
       <ion-item>
-        <ion-button color="success" shape="round" size="default" (click)="setOpen(true)"> Criar Categoria</ion-button>
         <ion-select label="Categoria" placeholder="Categoria" (ionChange)="setCategoria($event)">
           <ng-container *ngFor="let categoria of this.categoriaService.categorias">
             <ion-select-option value="{{ categoria.nome }}">{{ categoria.nome }}</ion-select-option>
@@ -45,9 +44,20 @@
       <ion-input label="Preço:" [(ngModel)]="this.produtoService.produto.preco"></ion-input>
     </ion-item>
 
+    
     <ion-item>
       <ion-toggle [checked]="true" aria-label="Enable Notifications"[(ngModel)]="this.produtoService.produto.ativo">Dísponivel:</ion-toggle>
-  
+      
+    </ion-item>
+    <ion-item>
+      <ion-content>
+        <ion-button expand="block" (click)="fileInput.click()">Escolher Imagem</ion-button>
+        <input type="file" accept="image/*" #fileInput (change)="onFileSelected($event)" [(ngModel)]="this.produtoService.produto.imagem" hidden>
+      
+        <div *ngIf="selectedImage">
+          <ion-img [src]="selectedImage"></ion-img>
+        </div>
+      </ion-content>
     </ion-item>
     <ion-item lines="none">
       <ion-button slot="end" color="success" shape="round" size="default" (click)="salvar()">Salvar</ion-button>

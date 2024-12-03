@@ -1,0 +1,8 @@
+<ion-content>
+  <ion-button expand="block" (click)="fileInput.click()">Escolher Imagem</ion-button>
+  <input type="file" accept="image/*" #fileInput (change)="onFileSelected($event)" hidden>
+
+  <div *ngIf="selectedImage">
+    <ion-img [src]="selectedImage"></ion-img>
+  </div>
+</ion-content>

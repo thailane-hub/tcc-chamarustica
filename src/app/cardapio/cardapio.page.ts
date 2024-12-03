@@ -24,6 +24,13 @@ export class CardapioPage {
   }
 
   ngOnInit() {
+    
+  }
+
+  filteredItems: any[] = this.produtoService.produtos;
+
+  filterItemsByCategoria(categoria: string): void {
+    this.filteredItems = this.produtoService.produtos.filter(produto => produto.categoria === categoria);
   }
 
   sec: any = 2;
