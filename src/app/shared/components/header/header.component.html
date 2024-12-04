@@ -1,7 +1,12 @@
 <ion-menu side="end" contentId="main-content">
   <ion-header>
-    <ion-toolbar color="warning">
-      <ion-title >{{this.userService.usuario.nome}} <span (click)="sair()">Sair</span></ion-title>
+    <ion-toolbar color="warning" class="bahianita-regular-green ">
+      <div class="toolbar">
+        <ion-item lines="none">
+          <ion-title slot="start">Oi, {{this.userService.usuario.nome}}!</ion-title>
+          <ion-button slot="end" (click)="sair()">Sair</ion-button >
+        </ion-item>
+        </div>
     </ion-toolbar>
   </ion-header>
   <ion-content class="ion-padding" color="dark">
