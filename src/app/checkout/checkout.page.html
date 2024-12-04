@@ -4,9 +4,9 @@
   <ion-row class="ajusteTudo">
 
       <ion-col size="3">
-        <ion-text class="fonte" id="espacamento">Endereço:</ion-text>
+        <ion-text class="fonte" id="espacamento"> Endereço: </ion-text>
         <div>
-          <form action="">
+          <form #enderecoForm="ngForm" (ngSubmit)="salvarEndereco(enderecoForm.value)">
             
             <ion-list>
               <ion-item class="list">
@@ -16,7 +16,7 @@
                 label="Nome"
                 labelPlacement="floating"
                 helperText="Opcional"
-                ngModel
+                [ngModel]="this.checkoutService.endereco.nome"
                 text
                 ></ion-input>
               </ion-item>
@@ -29,7 +29,7 @@
                 label="Telefone"
                 labelPlacement="floating"
                 helperText="Para contato"
-                ngModel
+                [ngModel]="this.checkoutService.endereco.telefone"
                 ></ion-input>
               </ion-item>
               
@@ -40,7 +40,7 @@
                 label="CEP"
                 labelPlacement="floating"
                 errorText="CEP inválido"
-                ngModel
+                [ngModel]="this.checkoutService.endereco.CEP"
                 ></ion-input>
               </ion-item>
               
@@ -50,7 +50,7 @@
                 fill="solid"
                 label="Número"
                 labelPlacement="floating"
-                ngModel
+                [ngModel]="this.checkoutService.endereco.numero"
                 ></ion-input>
               </ion-item>
               
@@ -61,67 +61,62 @@
                 label="Complemento"
                 labelPlacement="floating"
                 helperText="Opcional"
-                ngModel
+                [ngModel]="this.checkoutService.endereco.complemento"
                 ></ion-input>
               </ion-item>
               
               <ion-item>
-                <ion-select label="Entrega">
-                  <ion-select-option value="Retirar">Retirar no local</ion-select-option>
-                  <ion-select-option value="Delivery">Delivery</ion-select-option>
+                <ion-select label="Delivery">
+                  <ion-select-option value="sim">Sim</ion-select-option>
+                  <ion-select-option value="nao">Não</ion-select-option>
                 </ion-select>
               </ion-item>
               
               <ion-col class="button">
-                <ion-button  shape="round" color="success" type="submit" class="ion-padding"> Registar Endereço </ion-button>
+                <ion-button  shape="round" color="success" type="submit" class="ion-padding" click="salvar()"> Registar Endereço </ion-button>
               </ion-col>
             </ion-list>
           </form>
         </div>
       </ion-col>
 
-    <ion-col>
+    <ion-col size="3" class="ajustarFrete">
       <ng-container>
         <ion-col>
-          <ion-text class="fonte"> FINALIZAR PEDIDO </ion-text>
-          <div>
-            <ion-text class="espacoWords"> Subtotal: </ion-text>
-            <ion-text> R$: </ion-text>
-          </div>
-          <div>
-            <ion-text> Descontos: </ion-text>
-            <ion-text> R$: </ion-text>
-          </div>
-          <div>
-            <ion-text> Frete: </ion-text>
-            <ion-text> R$: </ion-text>
-          </div>
-          <div>
-            <ion-text> Total: </ion-text>
-            <ion-text> R$: </ion-text>
-          </div>
+          <ion-text class="fonte"> Finalizar Pedido: </ion-text>
+          <div id="fundoFrete">
+            <div id="espacoInterno">
+              <div>
+                <ion-text class="espacoWords8"> Subtotal: </ion-text>
+                <ion-text> R$: {{this.carrinhoService.getTotal()}}</ion-text>
+              </div>
+              <div>
+                <ion-text class="espacoWords9"> Descontos: </ion-text>
+                <ion-text> R$: </ion-text>
+              </div>
+              <div>
+                <ion-text class="espacoWords5"> Frete: </ion-text>
+                <ion-text> R$: 7.00 </ion-text>
+              </div>
+              <div>
+                <ion-text class="espacoWords5"> Total: </ion-text>
+                <ion-text> R$:  {{this.carrinhoService.addFrete()}}</ion-text>
+              </div>
+           </div>
+         </div>
         </ion-col>
       </ng-container>
+      <div class="botao">
+        <ion-button color="success" shape="round" class="adicionar" routerLink="/home">
+          <ion-icon slot="end" name="cart-outline" color="light"></ion-icon>
+          <ion-text color="light"> Finalizar </ion-text>
+        </ion-button>
+      </div>
     </ion-col>
   </ion-row>
-    <!-- <app-carrinho></app-carrinho> -->
-    
 
-      <!-- <div>
-        <div>
-          <ion-text class="fonte"> Revisar itens: </ion-text>
-        </div>
-        
-        <div class="botao">
-          <ion-button color="success" shape="round" class="adicionar" routerLink="/cardapio">
-            <ion-icon slot="end" name="cart-outline" color="light"></ion-icon>
-            <ion-text color="light"> Carrinho </ion-text>
-          </ion-button>
-        </div>
-      </div> -->
+    <app-carrinho></app-carrinho>
 
-    <footer>
-      <app-footer></app-footer>
-    </footer>
+    <app-footer></app-footer>
     
 </ion-content>

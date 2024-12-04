@@ -36,6 +36,11 @@ export class CarrinhoService {
     return total
   }
 
+  addFrete(){
+    this.total + 7;
+    this.total = this.getTotal();
+  }
+
   atualizarSubtotal(){
     this.carrinho.forEach(item => {
         item.subtotal= (item.quantidade * item.preco)

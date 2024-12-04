@@ -1,8 +1,9 @@
-// .botao{
-//     margin-right: 200px;
-//     gap: 20px;
-//     display: flex;
-// }
+.botao{
+    margin-right: 200px;
+    gap: 20px;
+    display: flex;
+    margin-top: 10px;
+}
 
 .fonte{
     font-family: "Bahianita", sans-serif;
@@ -13,10 +14,35 @@
     padding: 15px;
 }
 
-.espacoWords{
-    word-spacing: 50px;
+.espacoWords5{
+    word-spacing: 100px;
+}
+
+.espacoWords8{
+    word-spacing: 75px;
+}
+
+.espacoWords9{
+    word-spacing: 60px;
 }
 
 .ajusteTudo{
-    margin-left: 3rem;
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-bottom: 100px;
+}
+
+.ajustarFrete{
+    margin-left: 100px;
+}
+
+#fundoFrete{
+    background-color: #1e1e1e;
+    border-radius: 3px;
+}
+
+#espacoInterno{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
 }
