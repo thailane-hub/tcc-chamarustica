@@ -67,12 +67,20 @@ export class AuthenticateService {
                 console.log(data[0].nome);
                 this.userService.usuario.nome = data[0].nome
                 this.userService.usuario.email = data[0].email
-                this.userService.usuario.uid = response.user.uid
+                this.userService.usuario.tipo = data[0].tipo
+                this.userService.usuario.uid = response.user.uid                
                 
                 localStorage.setItem("usuario", JSON.stringify(this.userService.usuario))
             })
+
+            setTimeout(() => {
+                if(this.userService.usuario.tipo == "adm") {
+                    this.redirectTo('/cadastroprodutoadm');
+                } else{
+                    this.redirectTo('/home');
+                }
+            }, 500);
             
-            this.redirectTo('/home');
         
         })
         .catch((_: any) => {

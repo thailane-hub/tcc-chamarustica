@@ -13,15 +13,15 @@ export class CarrinhoComponent  {
     public carrinhoService:CarrinhoService,
   ) { }
 
-  incrementer(produto:any){
-    this.carrinhoService.incrementer(produto)
+  incrementer(item:any){
+    this.carrinhoService.incrementer(item)
   }
 
-  decrementer(produto:any){
-    this.carrinhoService.decrementer(produto)
+  decrementer(item:any){
+    this.carrinhoService.decrementer(item)
   }
 
-  deletar(produto: any) {
-    this.carrinhoService.deletar(produto)
+  deletar(item: any) {
+    this.carrinhoService.deletar(item)
   }
 }

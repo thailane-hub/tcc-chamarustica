@@ -9,7 +9,8 @@ export class UserService {
   usuario: any = {
      nome: null,
     email: null,
-    uid: null
+    uid: null,
+    tipo:null!
   }
  
 

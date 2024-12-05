@@ -27,11 +27,11 @@ export class CardapioPage {
     
   }
 
-  filteredItems: any[] = this.produtoService.produtos;
-
   filterItemsByCategoria(categoria: string): void {
-    this.filteredItems = this.produtoService.produtos.filter(produto => produto.categoria === categoria);
+    this.getProdutos(categoria)
   }
+
+
 
   sec: any = 2;
 
@@ -54,12 +54,25 @@ export class CardapioPage {
     this.sec = n;
   }
 
-  getProdutos(){
-    this.crudService.fetchAll('produtos')
+  getProdutos(categoria?:any){
+
+    if(categoria){
+      this.crudService.fetchByOperatorParam('categoria', '==', categoria, 'produtos')
+      .then(lista_produtos => {
+        console.log(lista_produtos);
+        this.produtoService.produtos = lista_produtos;
+      })
+    }
+
+    if(!categoria){
+      this.crudService.fetchAll('produtos')
     .then(lista_produtos => {
       console.log(lista_produtos);
       this.produtoService.produtos = lista_produtos;
     })
+    }
+
+
   }
 
 }

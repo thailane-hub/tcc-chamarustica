@@ -9,36 +9,36 @@
           <ion-card>
             <ion-card-content>
               <ion-list class="list">
-                <ng-container *ngFor="let produto of carrinhoService.getcarrinhoItens()">
+                <ng-container *ngFor="let item of carrinhoService.getcarrinhoItens()">
                   <ion-item class="ion-no-padding">
     
                     <ion-row class="container" >
                       <ion-col  size="12" size-md="3">
                         <ion-thumbnail>
-                          <img alt="Silhouette of mountains" src="{{produto.imagem}}" />
+                          <img alt="Silhouette of mountains" src="{{item.imagem}}" />
                         </ion-thumbnail>
                       </ion-col>
                       
                       <ion-col   size="12" size-md="3" class="carrinho-text">
-                        <ion-card-subtitle class="carrinho-titulo" color="primary">{{produto.nome}}</ion-card-subtitle>
+                        <ion-card-subtitle class="carrinho-titulo" color="primary">{{item.nome}}</ion-card-subtitle>
                       </ion-col>
                       
                       <ion-col size="6" size-md="3">
-                        <ion-label class="label">R$:  {{ produto.subtotal | number : '1.2-2' }}</ion-label>
+                        <ion-label class="label">R$:  {{ item.subtotal | number : '1.2-2' }}</ion-label>
                       </ion-col>
   
                       <ion-col size="6" size-md="3" class="incrementer">
   
-                        <ng-container *ngIf="produto.quantidade==1">
-                          <ion-icon name="trash-bin-outline"(click)="deletar(produto)"></ion-icon>
+                        <ng-container *ngIf="item.quantidade==1">
+                          <ion-icon name="trash-bin-outline"(click)="deletar(item)"></ion-icon>
                         </ng-container>
   
-                        <ng-container *ngIf="produto.quantidade > 1">
-                          <ion-icon name="remove-outline" (click)="decrementer(produto)"></ion-icon>
+                        <ng-container *ngIf="item.quantidade > 1">
+                          <ion-icon name="remove-outline" (click)="decrementer(item)"></ion-icon>
                         </ng-container>
   
-                        <ion-label> {{produto.quantidade}} </ion-label>
-                        <ion-icon name="add-outline" (click)="incrementer(produto)"></ion-icon>
+                        <ion-label> {{item.quantidade}} </ion-label>
+                        <ion-icon name="add-outline" (click)="incrementer(item)"></ion-icon>
   
                       </ion-col>
                       

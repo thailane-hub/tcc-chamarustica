@@ -8,13 +8,12 @@ export class CarrinhoService {
 
   public carrinho: any[] = [];
 
-  valores = [{quantidade:1, subtotal:0}]
-
   constructor() {
     this.atualizarSubtotal()
   }
 
   addProduto(produto: any) {
+    console.log(produto)
     let produtoexiste = this.carrinho.find(item => item.id === produto.id );
     if (!produtoexiste) {
       this.carrinho.push(produto);
@@ -28,7 +27,6 @@ export class CarrinhoService {
   }
 
   getTotal(){
-
     let total: number = 0;
     this.carrinho.forEach(item => {
       total += item.subtotal;
@@ -38,7 +36,9 @@ export class CarrinhoService {
 
   atualizarSubtotal(){
     this.carrinho.forEach(item => {
-        item.subtotal= (item.quantidade * item.preco)
+    
+      item.subtotal= (item.quantidade * item.preco)
+     
     })
     this.total = this.getTotal();
   }

@@ -11,7 +11,8 @@ export class MessageService {
         private _toastController: ToastController
     ) { }
 
-    public show(message: any, duration = 3000 || undefined) {
+    public show(message: any, duration?:any) {
+        duration = 3000
         this._toastController.create({
             message: message,
             duration: duration
